@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://fu6cvxrfdmwi"]
+
+[ext_resource type="Texture2D" uid="uid://dlod0ib3c8kby" path="res://Assets/Interactables/dialog-box.png" id="1_1fwv3"]
+[ext_resource type="Script" uid="uid://cbw7sx2vh5abe" path="res://Scripts/Interactables/DialogBox.cs" id="2_vgjek"]
+[ext_resource type="FontFile" uid="uid://bldjgxb6ahkyn" path="res://Assets/runescape_uf.ttf" id="3_fgs58"]
+
+[sub_resource type="Theme" id="Theme_fgs58"]
+default_font = ExtResource("3_fgs58")
+default_font_size = 9
+
+[node name="DialogBox" type="TextureRect" unique_id=1921442361 node_paths=PackedStringArray("displayImage", "displayText")]
+offset_right = 96.0
+offset_bottom = 64.0
+texture = ExtResource("1_1fwv3")
+script = ExtResource("2_vgjek")
+displayImage = NodePath("TextureRect")
+displayText = NodePath("RichTextLabel")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1942256468]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 92.0
+offset_bottom = 60.0
+theme = SubResource("Theme_fgs58")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2145427105]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 7.0
+offset_right = 72.0
+offset_bottom = 57.0

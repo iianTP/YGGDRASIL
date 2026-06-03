@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://quj87hnxo2q5"]
+
+[ext_resource type="Script" uid="uid://comuhfj8cxc7a" path="res://Scripts/Globals/AudioManager.cs" id="1_fbmny"]
+[ext_resource type="AudioStream" uid="uid://dwru1mnx1umbe" path="res://Assets/Music/lobby.ogg" id="2_ckt5d"]
+[ext_resource type="AudioStream" uid="uid://ciy67qwr5heu5" path="res://Assets/Music/world1.ogg" id="3_c63kx"]
+[ext_resource type="AudioStream" uid="uid://dql2rbd8t5jr1" path="res://Assets/Music/world2.ogg" id="4_dhgrt"]
+[ext_resource type="AudioStream" uid="uid://xtg7d6av5q8c" path="res://Assets/Music/world3.ogg" id="5_dy106"]
+[ext_resource type="AudioStream" uid="uid://d16oe4i5a7uy4" path="res://Assets/Music/Freeze.ogg" id="6_8udqw"]
+[ext_resource type="AudioStream" uid="uid://djyi2sxenxixp" path="res://Assets/Music/fase2.ogg" id="7_xyp0b"]
+[ext_resource type="AudioStream" uid="uid://ddh8fmgja2d77" path="res://Assets/Music/success.ogg" id="8_c63kx"]
+
+[node name="Music" type="Node2D" unique_id=1534513046 node_paths=PackedStringArray("success", "tracks")]
+script = ExtResource("1_fbmny")
+success = NodePath("success")
+tracks = [NodePath("lobby"), NodePath("world2"), NodePath("world1"), NodePath("fase2"), NodePath("Freeze"), NodePath("world3")]
+
+[node name="lobby" type="AudioStreamPlayer2D" parent="." unique_id=967810480]
+stream = ExtResource("2_ckt5d")
+attenuation = 0.0
+panning_strength = 0.0
+
+[node name="world1" type="AudioStreamPlayer2D" parent="." unique_id=2083135058]
+stream = ExtResource("3_c63kx")
+attenuation = 0.0
+panning_strength = 0.0
+
+[node name="world2" type="AudioStreamPlayer2D" parent="." unique_id=677806684]
+stream = ExtResource("4_dhgrt")
+attenuation = 0.0
+panning_strength = 0.0
+
+[node name="world3" type="AudioStreamPlayer2D" parent="." unique_id=1059223803]
+stream = ExtResource("5_dy106")
+attenuation = 0.0
+panning_strength = 0.0
+
+[node name="Freeze" type="AudioStreamPlayer2D" parent="." unique_id=1309845590]
+stream = ExtResource("6_8udqw")
+attenuation = 0.0
+panning_strength = 0.0
+
+[node name="fase2" type="AudioStreamPlayer2D" parent="." unique_id=1381748773]
+stream = ExtResource("7_xyp0b")
+attenuation = 0.0
+panning_strength = 0.0
+
+[node name="success" type="AudioStreamPlayer2D" parent="." unique_id=226145430]
+stream = ExtResource("8_c63kx")
+attenuation = 0.0
+panning_strength = 0.0

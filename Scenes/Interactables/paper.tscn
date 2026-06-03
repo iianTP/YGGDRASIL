@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://duyltirh6hdrx"]
+
+[ext_resource type="PackedScene" uid="uid://bya2888fhee1u" path="res://Scenes/Interactables/interactable.tscn" id="1_5dh3w"]
+[ext_resource type="Texture2D" uid="uid://c67dw8w4t5w8s" path="res://Assets/Interactables/paper.png" id="2_4vnn1"]
+[ext_resource type="Script" uid="uid://gt6htxx0lnqk" path="res://Scripts/Interactables/DialogEntity.cs" id="2_l0tts"]
+[ext_resource type="PackedScene" uid="uid://fu6cvxrfdmwi" path="res://Scenes/Interactables/dialog_box.tscn" id="3_l0tts"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l0tts"]
+radius = 9.0
+
+[node name="Paper" unique_id=1896786702 instance=ExtResource("1_5dh3w")]
+script = ExtResource("2_l0tts")
+dialogBox = ExtResource("3_l0tts")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=16521990]
+shape = SubResource("CircleShape2D_l0tts")
+
+[node name="Sprite2D" parent="." index="1" unique_id=466778605]
+texture = ExtResource("2_4vnn1")

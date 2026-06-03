@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dpdrw2ohtkf7x"]
+
+[ext_resource type="Script" uid="uid://bcaxey6uw50me" path="res://Scripts/Interactables/Teleport.cs" id="1_yqpnb"]
+[ext_resource type="PackedScene" uid="uid://dmydege0l4h16" path="res://Scenes/Interactables/teleport_point.tscn" id="2_j5nbf"]
+[ext_resource type="Texture2D" uid="uid://dx7tqges15og8" path="res://Assets/Interactables/teleport.png" id="2_yqpnb"]
+[ext_resource type="Texture2D" uid="uid://5q4ykoc2d35d" path="res://Assets/Interactables/teleport-end.png" id="4_j5nbf"]
+
+[node name="Teleport" type="Node2D" unique_id=1307436842 node_paths=PackedStringArray("tpEnter", "tpExit")]
+script = ExtResource("1_yqpnb")
+tpEnter = NodePath("TeleportEnter")
+tpExit = NodePath("TeleportExit")
+
+[node name="TeleportEnter" parent="." unique_id=1896786702 instance=ExtResource("2_j5nbf")]
+position = Vector2(-11, 0)
+sprite = ExtResource("2_yqpnb")
+
+[node name="TeleportExit" parent="." unique_id=1404257330 instance=ExtResource("2_j5nbf")]
+position = Vector2(12, 0)
+sprite = ExtResource("4_j5nbf")
+
+[node name="CollisionShape2D" parent="TeleportExit" index="0" unique_id=16521990]
+debug_color = Color(0.81519336, 0.001988185, 0.9775055, 0.41960785)
+
+[connection signal="area_entered" from="TeleportEnter" to="." method="_on_teleport_enter_area_entered"]
+[connection signal="area_entered" from="TeleportExit" to="." method="_on_teleport_exit_area_entered"]
+
+[editable path="TeleportExit"]

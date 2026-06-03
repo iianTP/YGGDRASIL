@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://nm0jbgfuadyt"]
+
+[ext_resource type="Script" uid="uid://ucs7pjc1iogl" path="res://Scripts/Button.cs" id="1_smycg"]
+[ext_resource type="Texture2D" uid="uid://cgf6wpqwrct15" path="res://Assets/Interactables/button.png" id="2_iju5o"]
+[ext_resource type="Texture2D" uid="uid://ccw4gjuqdo1lk" path="res://Assets/Interactables/button-pressed.png" id="3_edukx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_svtet"]
+radius = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrk2b"]
+atlas = ExtResource("2_iju5o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4mwi"]
+atlas = ExtResource("3_edukx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ur6nl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrk2b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4mwi")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 0.0
+}]
+
+[node name="Button" type="Area2D" unique_id=110037834 node_paths=PackedStringArray("buttonTimer", "as2d")]
+script = ExtResource("1_smycg")
+buttonTimer = NodePath("ButtonTimer")
+as2d = NodePath("AnimatedSprite2D")
+
+[node name="ButtonTimer" type="Timer" parent="." unique_id=937633099]
+wait_time = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=904758195]
+shape = SubResource("CircleShape2D_svtet")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1906679704]
+position = Vector2(0.5, -8)
+sprite_frames = SubResource("SpriteFrames_ur6nl")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

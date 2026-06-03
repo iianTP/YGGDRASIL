@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c5a17efdypukb"]
+
+[ext_resource type="PackedScene" uid="uid://2681ahaqgl0" path="res://Scenes/Shapes/shape.tscn" id="1_sd6oj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sd6oj"]
+albedo_color = Color(1, 0.4745098, 0, 1)
+
+[node name="Shape" unique_id=925858233 instance=ExtResource("1_sd6oj")]
+
+[node name="CSGPolygon3D" parent="CSGCombiner3D" parent_id_path=PackedInt32Array(1444523275) index="0" unique_id=1972649609]
+polygon = PackedVector2Array(0, 0, 0, 0.8, 0.5, 0.8, 0.5, 0)
+spin_sides = 5
+material = SubResource("StandardMaterial3D_sd6oj")

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dmydege0l4h16"]
+
+[ext_resource type="PackedScene" uid="uid://bya2888fhee1u" path="res://Scenes/Interactables/interactable.tscn" id="1_bt68y"]
+[ext_resource type="Script" uid="uid://dkqagdq3nd7ff" path="res://Scripts/Interactables/TeleportPoint.cs" id="2_q25gr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5nbf"]
+radius = 3.0
+
+[node name="TeleportEnter" unique_id=1896786702 node_paths=PackedStringArray("sprite2D") instance=ExtResource("1_bt68y")]
+script = ExtResource("2_q25gr")
+sprite2D = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=16521990]
+shape = SubResource("CircleShape2D_j5nbf")

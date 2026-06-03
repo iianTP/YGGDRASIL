@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cogqbl658vqlm"]
+
+[ext_resource type="PackedScene" uid="uid://bya2888fhee1u" path="res://Scenes/Interactables/interactable.tscn" id="1_yug8h"]
+[ext_resource type="Script" uid="uid://8d6j21smoybo" path="res://Scripts/Interactables/OldGuy.cs" id="2_mvjla"]
+[ext_resource type="Texture2D" uid="uid://cg2uvealwhjhm" path="res://Assets/Interactables/old-guy.png" id="2_xifq4"]
+[ext_resource type="PackedScene" uid="uid://fu6cvxrfdmwi" path="res://Scenes/Interactables/dialog_box.tscn" id="3_mvjla"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mvjla"]
+radius = 20.0
+
+[node name="OldGuy" unique_id=1896786702 instance=ExtResource("1_yug8h")]
+script = ExtResource("2_mvjla")
+dialogBox = ExtResource("3_mvjla")
+dialogue = PackedStringArray("Buttons... The very start and the end of it all.", "\'X\' marks the pirate, said the spots.")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=16521990]
+shape = SubResource("CircleShape2D_mvjla")
+
+[node name="Sprite2D" parent="." index="1" unique_id=466778605]
+position = Vector2(0, -5)
+texture = ExtResource("2_xifq4")
