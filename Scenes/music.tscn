@@ -7,11 +7,15 @@
 [ext_resource type="AudioStream" uid="uid://xtg7d6av5q8c" path="res://Assets/Music/world3.ogg" id="5_dy106"]
 [ext_resource type="AudioStream" uid="uid://d16oe4i5a7uy4" path="res://Assets/Music/Freeze.ogg" id="6_8udqw"]
 [ext_resource type="AudioStream" uid="uid://djyi2sxenxixp" path="res://Assets/Music/fase2.ogg" id="7_xyp0b"]
-[ext_resource type="AudioStream" uid="uid://ddh8fmgja2d77" path="res://Assets/Music/success.ogg" id="8_c63kx"]
+[ext_resource type="AudioStream" uid="uid://bcga8ce665pay" path="res://Assets/Music/success.ogg" id="8_c63kx"]
+[ext_resource type="AudioStream" uid="uid://d3x0piqql26dv" path="res://Assets/Music/fail.ogg" id="9_dy106"]
+[ext_resource type="AudioStream" uid="uid://xkamg72odhtq" path="res://Assets/Music/click.ogg" id="10_8udqw"]
 
-[node name="Music" type="Node2D" unique_id=1534513046 node_paths=PackedStringArray("success", "tracks")]
+[node name="Music" type="Node2D" unique_id=1534513046 node_paths=PackedStringArray("success", "fail", "click", "tracks")]
 script = ExtResource("1_fbmny")
 success = NodePath("success")
+fail = NodePath("fail")
+click = NodePath("click")
 tracks = [NodePath("lobby"), NodePath("world2"), NodePath("world1"), NodePath("fase2"), NodePath("Freeze"), NodePath("world3")]
 
 [node name="lobby" type="AudioStreamPlayer2D" parent="." unique_id=967810480]
@@ -46,5 +50,15 @@ panning_strength = 0.0
 
 [node name="success" type="AudioStreamPlayer2D" parent="." unique_id=226145430]
 stream = ExtResource("8_c63kx")
+attenuation = 0.0
+panning_strength = 0.0
+
+[node name="fail" type="AudioStreamPlayer2D" parent="." unique_id=1494917616]
+stream = ExtResource("9_dy106")
+attenuation = 0.0
+panning_strength = 0.0
+
+[node name="click" type="AudioStreamPlayer2D" parent="." unique_id=2137964124]
+stream = ExtResource("10_8udqw")
 attenuation = 0.0
 panning_strength = 0.0

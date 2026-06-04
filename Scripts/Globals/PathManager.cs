@@ -29,7 +29,10 @@ public partial class PathManager : Node
 		if(started) 
 			CheckSolution();
 		else
+		{
 			path = "";
+			AudioManager.Instance.ClickSfx();
+		}
 			
 		started = !started;
 	}
@@ -51,6 +54,9 @@ public partial class PathManager : Node
 			SolvedList.Add(color);
 			solvedCount++;
 			AudioManager.Instance.SuccessSfx();
+		} else
+		{
+			AudioManager.Instance.FailSfx();
 		}
 	}
 

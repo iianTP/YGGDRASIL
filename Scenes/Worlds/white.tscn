@@ -64,7 +64,7 @@ direction = -45
 texture = ExtResource("8_72465")
 
 [node name="Paper" parent="." index="5" unique_id=1458549728 instance=ExtResource("8_dwmt7")]
-position = Vector2(144, 186)
+position = Vector2(144, 174)
 image = ExtResource("9_72465")
 
 [node name="Player" parent="." index="6" unique_id=1833167824]

@@ -269,6 +269,7 @@ script = ExtResource("1_cvnsp")
 as2d = NodePath("AnimatedSprite2D")
 speed = 150
 jump_force = 350
+maxFallSpeed = 400.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1773322148 groups=["Player"]]
 

@@ -9,7 +9,7 @@ public partial class Player : CharacterBody2D
 
 	[Export] private int speed;
 	[Export] private int jump_force;
-	[Export] private float coyotteTime;
+	[Export] private float maxFallSpeed;
 
 	private string currWorld;
 
@@ -29,7 +29,11 @@ public partial class Player : CharacterBody2D
 	{
 
 		if (!IsOnFloor())
+		{
 			Velocity += Vector2.Down * GetGravity() * (float)delta;
+			if (Velocity.Y >= maxFallSpeed)
+				Velocity = Vector2.Down * maxFallSpeed;
+		}
 
 		else if (Input.IsActionJustPressed("jump"))
 			Velocity = Vector2.Up * jump_force;
