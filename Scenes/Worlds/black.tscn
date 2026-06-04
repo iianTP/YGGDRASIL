@@ -16,8 +16,8 @@ tile_map_data = PackedByteArray("AAABAAkAAQAAAAEAAAACAAkAAQABAAEAAAADAAkAAQABAAE
 position = Vector2(122, 792)
 
 [node name="Paper" parent="." index="3" unique_id=1363317426 instance=ExtResource("4_nery7")]
-position = Vector2(115, 1036)
-dialogue = PackedStringArray("REFLECT record  ponder forget     plan      copy MIRROR  wonder    LOG")
+position = Vector2(115, 1037)
+dialogue = PackedStringArray("REFLECT record  ponder \\n\\nforget     plan      copy \\n\\nMIRROR  wonder    LOG")
 
 [node name="Player" parent="." index="4" unique_id=1833167824]
 position = Vector2(225, 1025)
