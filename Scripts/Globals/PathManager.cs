@@ -47,16 +47,18 @@ public partial class PathManager : Node
 		ConfigFile cf = Utils.Instance.cf;
 
 		cf.Load("res://Assets/Patterns/solutions.cfg");
-		
+
+		string color = "";
 		if (cf.GetSections().Contains(path))
+			color = (string)cf.GetValue(path,"color");
+		
+		if (color == "" || SolvedList.Contains(color))
+			AudioManager.Instance.FailSfx();
+		else
 		{
-			string color = (string)cf.GetValue(path,"color");
 			SolvedList.Add(color);
 			solvedCount++;
-			AudioManager.Instance.SuccessSfx();
-		} else
-		{
-			AudioManager.Instance.FailSfx();
+			AudioManager.Instance.SuccessSfx();	
 		}
 	}
 
