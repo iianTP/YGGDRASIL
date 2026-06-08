@@ -295,7 +295,7 @@ position_smoothing_enabled = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=387860472]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=554233939]
-z_index = 1
+z_index = 10
 material = SubResource("ShaderMaterial_6t5aa")
 offset_left = -92.0
 offset_top = -27.61

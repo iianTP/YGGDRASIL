@@ -8,6 +8,7 @@ public partial class Menu : CanvasLayer
 	public void _on_play_pressed()
 	{
 		Node world = initWorld.Instantiate();
+		AudioManager.Instance.StartMusic();
 		GetTree().ChangeSceneToNode(world);
 	}
 

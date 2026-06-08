@@ -22,6 +22,8 @@ public partial class AudioManager : Node
 
 	public void StartMusic()
 	{
+		if (!musicOn) return;
+
 		foreach (AudioStreamPlayer2D track in tracks)
 			track.Finished += NextTrack;
 		
@@ -37,16 +39,19 @@ public partial class AudioManager : Node
 
 	public void ClickSfx()
 	{
+		if (!sfxOn) return;
 		click.Play();
 	}
 
 	public void SuccessSfx()
 	{
+		if (!sfxOn) return;
 		success.Play();
 	}
 
 	public void FailSfx()
 	{
+		if (!sfxOn) return;
 		fail.Play();
 	}
 

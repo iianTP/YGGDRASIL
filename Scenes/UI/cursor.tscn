@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://daoa88i0s38jl"]
+
+[ext_resource type="Texture2D" uid="uid://c8bv4o32kfbfd" path="res://Assets/cursor.png" id="1_2k2pw"]
+[ext_resource type="Script" uid="uid://dxpsbq1g0pcfm" path="res://Scripts/UI/Cursor.cs" id="2_ua2ut"]
+
+[node name="Cursor" type="Sprite2D" unique_id=436838560]
+z_index = 5
+scale = Vector2(2, 2)
+texture = ExtResource("1_2k2pw")
+script = ExtResource("2_ua2ut")
