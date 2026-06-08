@@ -8,6 +8,7 @@ public partial class PathManager : Node
 	public static PathManager Instance { get; private set; }
 
 	public List<string> SolvedList { get; private set; } = [];
+	public List<int> SolvedIdList { get; private set; } = [];
 	private int solvedCount = 0;
 	private bool started = false;
 	private string path = "";
@@ -16,6 +17,21 @@ public partial class PathManager : Node
 	public override void _Ready()
 	{
 		Instance = this;
+		LoadPuzzlesSolved();
+	}
+
+	private void LoadPuzzlesSolved()
+	{
+		ConfigFile cf = Utils.Instance.cf;
+
+		cf.Load("user://solved.cfg");
+
+		string[] idList = cf.GetSections();
+		foreach (string id in idList)
+		{
+			SolvedIdList.Add(id.ToInt());
+			solvedCount++;
+		}
 	}
 
 	public void AppendPath(int worldId)
@@ -48,15 +64,22 @@ public partial class PathManager : Node
 
 		cf.Load("res://Assets/Patterns/solutions.cfg");
 
-		string color = "";
+		int id = -1;
 		if (cf.GetSections().Contains(path))
-			color = (string)cf.GetValue(path,"color");
-		
-		if (color == "" || SolvedList.Contains(color))
+			id = (int)cf.GetValue(path,"id");
+
+		if (id == -1 || SolvedIdList.Contains(id))
 			AudioManager.Instance.FailSfx();
 		else
 		{
-			SolvedList.Add(color);
+
+			SolvedIdList.Add(id);
+			
+			cf.Clear();
+			cf.Load("user://solved.cfg");
+			cf.SetValue($"{id}","success",true);
+			cf.Save("user://solved.cfg");
+
 			solvedCount++;
 			AudioManager.Instance.SuccessSfx();	
 		}

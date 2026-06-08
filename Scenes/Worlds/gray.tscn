@@ -69,6 +69,6 @@ position = Vector2(-242, 372)
 image = ExtResource("7_5mwr6")
 
 [node name="Player" parent="." index="8" unique_id=1833167824]
-position = Vector2(252, 301)
+position = Vector2(255, 340)
 
 [connection signal="body_entered" from="OldGuy" to="OldGuy" method="_on_body_entered"]

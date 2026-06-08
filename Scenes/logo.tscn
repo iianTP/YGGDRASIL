@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b4om2cpmp418a"]
+
+[ext_resource type="PackedScene" uid="uid://dpfh2gibsfqn1" path="res://Scenes/letter.tscn" id="1_lo6vi"]
+
+[node name="Logo" type="Control" unique_id=343491697]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Y" parent="." unique_id=2006152016 instance=ExtResource("1_lo6vi")]
+position = Vector2(-9, -9)
+
+[node name="G1" parent="." unique_id=371847040 instance=ExtResource("1_lo6vi")]
+position = Vector2(0, -9)
+letter = 1
+
+[node name="G2" parent="." unique_id=1951671508 instance=ExtResource("1_lo6vi")]
+position = Vector2(9, -9)
+letter = 2
+
+[node name="D" parent="." unique_id=1369770428 instance=ExtResource("1_lo6vi")]
+position = Vector2(-9, 0)
+letter = 3
+
+[node name="R" parent="." unique_id=612491984 instance=ExtResource("1_lo6vi")]
+letter = 4
+
+[node name="A" parent="." unique_id=1167623715 instance=ExtResource("1_lo6vi")]
+position = Vector2(9, 0)
+letter = 5
+
+[node name="S" parent="." unique_id=2073245173 instance=ExtResource("1_lo6vi")]
+position = Vector2(-9, 9)
+letter = 6
+
+[node name="I" parent="." unique_id=229973550 instance=ExtResource("1_lo6vi")]
+position = Vector2(0, 9)
+letter = 7
+
+[node name="L" parent="." unique_id=1316100380 instance=ExtResource("1_lo6vi")]
+position = Vector2(9, 9)
+letter = 8

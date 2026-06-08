@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Button : Area2D
+public partial class PathButton : Area2D
 {
 	[Signal] public delegate void ButtonPressedEventHandler();
 

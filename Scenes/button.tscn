@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://nm0jbgfuadyt"]
 
-[ext_resource type="Script" uid="uid://ucs7pjc1iogl" path="res://Scripts/Button.cs" id="1_smycg"]
+[ext_resource type="Script" uid="uid://ucs7pjc1iogl" path="res://Scripts/PathButton.cs" id="1_smycg"]
 [ext_resource type="Texture2D" uid="uid://cgf6wpqwrct15" path="res://Assets/Interactables/button.png" id="2_iju5o"]
 [ext_resource type="Texture2D" uid="uid://ccw4gjuqdo1lk" path="res://Assets/Interactables/button-pressed.png" id="3_edukx"]
 

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dpfh2gibsfqn1"]
+
+[ext_resource type="Texture2D" uid="uid://bbbkutfwq714l" path="res://Assets/menu-slot.png" id="1_ka838"]
+[ext_resource type="Texture2D" uid="uid://fsq12k1fkph" path="res://Assets/logo.png" id="2_7n1mw"]
+[ext_resource type="Script" uid="uid://dil4duad77a5c" path="res://Scripts/UI/Letter.cs" id="3_sqwnb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n1mw"]
+atlas = ExtResource("1_ka838")
+region = Rect2(0, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqwnb"]
+atlas = ExtResource("2_7n1mw")
+region = Rect2(0, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbl6t"]
+atlas = ExtResource("2_7n1mw")
+region = Rect2(9, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfy4y"]
+atlas = ExtResource("2_7n1mw")
+region = Rect2(18, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3lmy"]
+atlas = ExtResource("2_7n1mw")
+region = Rect2(0, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is782"]
+atlas = ExtResource("2_7n1mw")
+region = Rect2(9, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncqpm"]
+atlas = ExtResource("2_7n1mw")
+region = Rect2(18, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5edsh"]
+atlas = ExtResource("2_7n1mw")
+region = Rect2(0, 18, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gplh0"]
+atlas = ExtResource("2_7n1mw")
+region = Rect2(9, 18, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22kkf"]
+atlas = ExtResource("2_7n1mw")
+region = Rect2(18, 18, 9, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sqwnb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n1mw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqwnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbl6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfy4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3lmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is782")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncqpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5edsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gplh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22kkf")
+}],
+"loop": true,
+"name": &"show",
+"speed": 0.0
+}]
+
+[node name="Letter" type="AnimatedSprite2D" unique_id=2006152016]
+sprite_frames = SubResource("SpriteFrames_sqwnb")
+script = ExtResource("3_sqwnb")

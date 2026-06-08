@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://fsvvwk43ij46"]
+
+[ext_resource type="FontFile" uid="uid://bldjgxb6ahkyn" path="res://Assets/runescape_uf.ttf" id="1_grme0"]
+[ext_resource type="Script" uid="uid://o1bv1mo0vvle" path="res://Scripts/UI/UiButton.cs" id="2_tnpna"]
+
+[sub_resource type="Theme" id="Theme_tnpna"]
+default_font = ExtResource("1_grme0")
+
+[node name="UIButton" type="Button" unique_id=29831465]
+offset_right = 82.905
+offset_bottom = 24.0
+theme = SubResource("Theme_tnpna")
+text = "TESTE"
+flat = true
+script = ExtResource("2_tnpna")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -15,6 +15,8 @@ public partial class Utils : Node
 		SE = 45,  S = 0,   SW = -45
 	}
 
+	public enum Letters{ Y,G1,G2,D,R,A,S,I,L }
+
 	public override void _Ready()
 	{
 		Instance = this;
