@@ -12,13 +12,19 @@ public partial class AudioManager : Node
 	[Export] private AudioStreamPlayer2D[] tracks;
 	private int currTrack = 0;
 
+	private bool musicOn = true;
+	private bool sfxOn = true;
+
 	public override void _Ready()
 	{
 		Instance = this;
+	}
+
+	public void StartMusic()
+	{
 		foreach (AudioStreamPlayer2D track in tracks)
-		{
 			track.Finished += NextTrack;
-		}
+		
 		tracks[0].Play();
 	}
 
@@ -44,7 +50,11 @@ public partial class AudioManager : Node
 		fail.Play();
 	}
 
-
+	public void SetAudio(bool music, bool sfx)
+	{
+		musicOn = music;
+		sfxOn = sfx;
+	}
 
 
 }

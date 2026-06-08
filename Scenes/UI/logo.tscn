@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4om2cpmp418a"]
 
-[ext_resource type="PackedScene" uid="uid://dpfh2gibsfqn1" path="res://Scenes/letter.tscn" id="1_lo6vi"]
+[ext_resource type="PackedScene" uid="uid://dpfh2gibsfqn1" path="res://Scenes/UI/letter.tscn" id="1_lo6vi"]
 
 [node name="Logo" type="Control" unique_id=343491697]
 layout_mode = 3

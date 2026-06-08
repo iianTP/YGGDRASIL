@@ -85,5 +85,11 @@ public partial class PathManager : Node
 		}
 	}
 
+	public void ClearSolvedPuzzles()
+	{
+		SolvedIdList = [];
+		solvedCount = 0;
+	}
+
 
 }

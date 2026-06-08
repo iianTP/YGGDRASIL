@@ -13,7 +13,7 @@ public partial class Menu : CanvasLayer
 
 	public void _on_config_pressed()
 	{
-		
+		GetTree().ChangeSceneToFile("res://Scenes/UI/config.tscn");
 	}
 
 	public void _on_quit_pressed()

@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://dymokdra4ndcf"]
 
-[ext_resource type="Script" uid="uid://djtm82m0ea7nk" path="res://Scripts/UI/Menu.cs" id="1_xhh6f"]
-[ext_resource type="PackedScene" uid="uid://bwy0blyjmgiw2" path="res://Scenes/Worlds/gray.tscn" id="2_cayip"]
-[ext_resource type="PackedScene" uid="uid://b4om2cpmp418a" path="res://Scenes/logo.tscn" id="3_158mb"]
-[ext_resource type="PackedScene" uid="uid://fsvvwk43ij46" path="res://Scenes/ui_button.tscn" id="4_158mb"]
-[ext_resource type="Shader" uid="uid://6k3muaif5mb6" path="res://Shaders/camera.gdshader" id="5_wwsa2"]
+[ext_resource type="Script" uid="uid://djtm82m0ea7nk" path="res://Scripts/UI/Menu.cs" id="1_tjcm1"]
+[ext_resource type="PackedScene" uid="uid://bwy0blyjmgiw2" path="res://Scenes/Worlds/gray.tscn" id="2_ugp1d"]
+[ext_resource type="PackedScene" uid="uid://b4om2cpmp418a" path="res://Scenes/UI/logo.tscn" id="3_rb4ur"]
+[ext_resource type="Shader" uid="uid://6k3muaif5mb6" path="res://Shaders/camera.gdshader" id="4_4twqa"]
+[ext_resource type="PackedScene" uid="uid://fsvvwk43ij46" path="res://Scenes/UI/ui_button.tscn" id="5_ttkkf"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u4yt8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jsrd8"]
-shader = ExtResource("5_wwsa2")
+shader = ExtResource("4_4twqa")
 shader_parameter/overlay = false
 shader_parameter/scanlines_opacity = 0.4
 shader_parameter/scanlines_width = 0.5
@@ -35,8 +35,8 @@ shader_parameter/vignette_opacity = 0.5
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wbdvm"]
 
 [node name="Menu" type="CanvasLayer" unique_id=1407137969]
-script = ExtResource("1_xhh6f")
-initWorld = ExtResource("2_cayip")
+script = ExtResource("1_tjcm1")
+initWorld = ExtResource("2_ugp1d")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1892605923]
 self_modulate = Color(0, 0, 0, 1)
@@ -46,7 +46,7 @@ offset_right = 665.0
 offset_bottom = 391.0
 texture = SubResource("PlaceholderTexture2D_u4yt8")
 
-[node name="Logo" parent="." unique_id=257269136 instance=ExtResource("3_158mb")]
+[node name="Logo" parent="." unique_id=257269136 instance=ExtResource("3_rb4ur")]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -80,19 +80,19 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Play" parent="HBoxContainer" unique_id=29831465 instance=ExtResource("4_158mb")]
+[node name="Play" parent="HBoxContainer" unique_id=29831465 instance=ExtResource("5_ttkkf")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 text = "P L A Y"
 
-[node name="Config" parent="HBoxContainer" unique_id=2091387203 instance=ExtResource("4_158mb")]
+[node name="Config" parent="HBoxContainer" unique_id=2091387203 instance=ExtResource("5_ttkkf")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 text = "C O N F I G"
 
-[node name="Quit" parent="HBoxContainer" unique_id=52002760 instance=ExtResource("4_158mb")]
+[node name="Quit" parent="HBoxContainer" unique_id=52002760 instance=ExtResource("5_ttkkf")]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4

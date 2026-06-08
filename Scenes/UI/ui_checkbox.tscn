@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ba1bne27hrkyv"]
+
+[ext_resource type="FontFile" uid="uid://bldjgxb6ahkyn" path="res://Assets/runescape_uf.ttf" id="1_6c4ks"]
+
+[sub_resource type="Theme" id="Theme_6lc2h"]
+default_font = ExtResource("1_6c4ks")
+
+[node name="CheckBox" type="CheckBox" unique_id=1986163050]
+offset_right = 24.0
+offset_bottom = 24.0
+theme = SubResource("Theme_6lc2h")
+text = "TESTE"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
