@@ -5,11 +5,13 @@ public partial class AudioManager : Node
 {
 	public static AudioManager Instance { get; private set; }
 
+	[Export] private AudioStreamPlayer2D[] tracks;
+
+	[Export] private AudioStreamPlayer2D click;
 	[Export] private AudioStreamPlayer2D success;
 	[Export] private AudioStreamPlayer2D fail;
-	[Export] private AudioStreamPlayer2D click;
 
-	[Export] private AudioStreamPlayer2D[] tracks;
+
 	private int currTrack = 0;
 
 	private bool musicOn = true;
@@ -37,22 +39,23 @@ public partial class AudioManager : Node
 		tracks[currTrack].Play();
 	}
 
-	public void ClickSfx()
+	public void PlaySfx(string sfx)
 	{
 		if (!sfxOn) return;
-		click.Play();
-	}
-
-	public void SuccessSfx()
-	{
-		if (!sfxOn) return;
-		success.Play();
-	}
-
-	public void FailSfx()
-	{
-		if (!sfxOn) return;
-		fail.Play();
+		
+		switch (sfx){
+			case "click":
+				click.Play();
+				break;
+			case "success":
+				success.Play();
+				break;
+			case "fail":
+				fail.Play();
+				break;
+			default:
+				break;
+		}	
 	}
 
 	public void SetAudio(bool music, bool sfx)

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Config : Control
+public partial class Config : CanvasLayer
 {
 	private bool musicOn = true;
 	private bool sfxOn = true;

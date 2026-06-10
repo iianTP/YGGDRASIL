@@ -11,54 +11,58 @@
 [ext_resource type="AudioStream" uid="uid://d3x0piqql26dv" path="res://Assets/Music/fail.ogg" id="9_tguop"]
 [ext_resource type="AudioStream" uid="uid://xkamg72odhtq" path="res://Assets/Music/click.ogg" id="10_d3c6v"]
 
-[node name="Sounds" type="Node2D" unique_id=1534513046 node_paths=PackedStringArray("success", "fail", "click", "tracks")]
+[node name="Sounds" type="Node2D" unique_id=1534513046 node_paths=PackedStringArray("tracks", "click", "success", "fail")]
 script = ExtResource("1_n2lyl")
-success = NodePath("success")
-fail = NodePath("fail")
-click = NodePath("click")
-tracks = [NodePath("lobby"), NodePath("world2"), NodePath("world1"), NodePath("fase2"), NodePath("Freeze"), NodePath("world3")]
+tracks = [NodePath("Music/lobby"), NodePath("Music/world2"), NodePath("Music/world1"), NodePath("Music/fase2"), NodePath("Music/Freeze"), NodePath("Music/world3")]
+click = NodePath("Sfx/click")
+success = NodePath("Sfx/success")
+fail = NodePath("Sfx/fail")
 
-[node name="lobby" type="AudioStreamPlayer2D" parent="." unique_id=967810480]
+[node name="Music" type="Node2D" parent="." unique_id=648291122]
+
+[node name="lobby" type="AudioStreamPlayer2D" parent="Music" unique_id=967810480]
 stream = ExtResource("2_njb7d")
 attenuation = 0.0
 panning_strength = 0.0
 
-[node name="world1" type="AudioStreamPlayer2D" parent="." unique_id=2083135058]
+[node name="world1" type="AudioStreamPlayer2D" parent="Music" unique_id=2083135058]
 stream = ExtResource("3_3poqn")
 attenuation = 0.0
 panning_strength = 0.0
 
-[node name="world2" type="AudioStreamPlayer2D" parent="." unique_id=677806684]
+[node name="world2" type="AudioStreamPlayer2D" parent="Music" unique_id=677806684]
 stream = ExtResource("4_rmy1r")
 attenuation = 0.0
 panning_strength = 0.0
 
-[node name="world3" type="AudioStreamPlayer2D" parent="." unique_id=1059223803]
+[node name="world3" type="AudioStreamPlayer2D" parent="Music" unique_id=1059223803]
 stream = ExtResource("5_0p47e")
 attenuation = 0.0
 panning_strength = 0.0
 
-[node name="Freeze" type="AudioStreamPlayer2D" parent="." unique_id=1309845590]
+[node name="Freeze" type="AudioStreamPlayer2D" parent="Music" unique_id=1309845590]
 stream = ExtResource("6_7kqwi")
 attenuation = 0.0
 panning_strength = 0.0
 
-[node name="fase2" type="AudioStreamPlayer2D" parent="." unique_id=1381748773]
+[node name="fase2" type="AudioStreamPlayer2D" parent="Music" unique_id=1381748773]
 stream = ExtResource("7_e285m")
 attenuation = 0.0
 panning_strength = 0.0
 
-[node name="success" type="AudioStreamPlayer2D" parent="." unique_id=226145430]
-stream = ExtResource("8_8168a")
+[node name="Sfx" type="Node2D" parent="." unique_id=1857902081]
+
+[node name="click" type="AudioStreamPlayer2D" parent="Sfx" unique_id=2137964124]
+stream = ExtResource("10_d3c6v")
 attenuation = 0.0
 panning_strength = 0.0
 
-[node name="fail" type="AudioStreamPlayer2D" parent="." unique_id=1494917616]
+[node name="fail" type="AudioStreamPlayer2D" parent="Sfx" unique_id=1494917616]
 stream = ExtResource("9_tguop")
 attenuation = 0.0
 panning_strength = 0.0
 
-[node name="click" type="AudioStreamPlayer2D" parent="." unique_id=2137964124]
-stream = ExtResource("10_d3c6v")
+[node name="success" type="AudioStreamPlayer2D" parent="Sfx" unique_id=226145430]
+stream = ExtResource("8_8168a")
 attenuation = 0.0
 panning_strength = 0.0

@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cfgtykd3slupv" path="res://Scripts/Player.cs" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://rlk5mx85oc4r" path="res://Assets/Player/gray-player.png" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://dty88ovytr5d6" path="res://Assets/Player/black-player.png" id="2_x3wgy"]
-[ext_resource type="Shader" uid="uid://6k3muaif5mb6" path="res://Shaders/camera.gdshader" id="3_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://bl2487nhdwbwq" path="res://Assets/Player/blue-player.png" id="3_gymyn"]
 [ext_resource type="Texture2D" uid="uid://iec300ovr2jr" path="res://Assets/Player/red-player.png" id="4_3smsa"]
 [ext_resource type="Texture2D" uid="uid://jy44uybvx6bh" path="res://Assets/Player/white-player.png" id="5_8erm5"]
@@ -238,32 +237,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6t5aa"]
-shader = ExtResource("3_6t5aa")
-shader_parameter/overlay = false
-shader_parameter/scanlines_opacity = 0.4
-shader_parameter/scanlines_width = 0.5
-shader_parameter/grille_opacity = 0.5390000256025
-shader_parameter/resolution = Vector2(640, 480)
-shader_parameter/pixelate = false
-shader_parameter/roll = true
-shader_parameter/roll_speed = 2.0
-shader_parameter/roll_size = 15.0
-shader_parameter/roll_variation = 1.8
-shader_parameter/distort_intensity = 0.0050000002375
-shader_parameter/noise_opacity = 0.4
-shader_parameter/noise_speed = 5.0
-shader_parameter/static_noise_intensity = 0.0250000011875
-shader_parameter/aberration = 0.01000004797499998
-shader_parameter/brightness = 1.4
-shader_parameter/discolor = false
-shader_parameter/warp_amount = 1.7650000838375
-shader_parameter/clip_warp = false
-shader_parameter/vignette_intensity = 1.22
-shader_parameter/vignette_opacity = 0.5
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_vgqql"]
-
 [node name="Player" type="CharacterBody2D" unique_id=1833167824 node_paths=PackedStringArray("as2d")]
 script = ExtResource("1_cvnsp")
 as2d = NodePath("AnimatedSprite2D")
@@ -291,15 +264,3 @@ animation = &"Gray_idle"
 zoom = Vector2(1.015, 1.015)
 process_callback = 0
 position_smoothing_enabled = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=387860472]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=554233939]
-z_index = 10
-material = SubResource("ShaderMaterial_6t5aa")
-offset_left = -92.0
-offset_top = -27.61
-offset_right = 548.0
-offset_bottom = 292.39
-scale = Vector2(1.3, 1.3)
-texture = SubResource("PlaceholderTexture2D_vgqql")

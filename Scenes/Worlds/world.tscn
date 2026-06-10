@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bt6ruc5tvue23" path="res://Assets/Tiles/orange-tiles-extra.png" id="18_xc0f8"]
 [ext_resource type="Texture2D" uid="uid://dyq81iociqbim" path="res://Assets/Tiles/orange-tiles.png" id="19_c0fcv"]
 [ext_resource type="PackedScene" uid="uid://nm0jbgfuadyt" path="res://Scenes/button.tscn" id="20_j0lpo"]
+[ext_resource type="PackedScene" uid="uid://2y7bcw03ctkx" path="res://Scenes/vhs.tscn" id="22_l4bdw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqxts"]
 texture = ExtResource("2_q4fwo")
@@ -664,7 +665,7 @@ sources/17 = SubResource("TileSetAtlasSource_j55pd")
 background_mode = 3
 glow_enabled = true
 glow_intensity = 0.75
-glow_strength = 0.88
+glow_strength = 0.85
 glow_mix = 0.401
 glow_bloom = 1.0
 
@@ -682,5 +683,9 @@ environment = SubResource("Environment_q4fwo")
 [node name="Button" parent="." unique_id=110037834 instance=ExtResource("20_j0lpo")]
 
 [node name="Player" parent="." unique_id=1833167824 instance=ExtResource("1_0hgqg")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1884822751]
+
+[node name="VHS" parent="CanvasLayer" unique_id=1467181610 instance=ExtResource("22_l4bdw")]
 
 [connection signal="ButtonPressed" from="Button" to="." method="_on_button_button_pressed"]

@@ -47,7 +47,7 @@ public partial class PathManager : Node
 		else
 		{
 			path = "";
-			AudioManager.Instance.ClickSfx();
+			AudioManager.Instance.PlaySfx("click");
 		}
 			
 		started = !started;
@@ -69,7 +69,7 @@ public partial class PathManager : Node
 			id = (int)cf.GetValue(path,"id");
 
 		if (id == -1 || SolvedIdList.Contains(id))
-			AudioManager.Instance.FailSfx();
+			AudioManager.Instance.PlaySfx("fail");
 		else
 		{
 
@@ -81,7 +81,7 @@ public partial class PathManager : Node
 			cf.Save("user://solved.cfg");
 
 			solvedCount++;
-			AudioManager.Instance.SuccessSfx();	
+			AudioManager.Instance.PlaySfx("success");	
 		}
 	}
 
