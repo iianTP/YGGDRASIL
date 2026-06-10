@@ -20,18 +20,21 @@ public partial class AudioManager : Node
 	public override void _Ready()
 	{
 		Instance = this;
+		foreach (AudioStreamPlayer2D track in tracks)
+			track.Finished += NextTrack;
 	}
 
 	public void StartMusic()
 	{
 		if (!musicOn) return;
-
-		foreach (AudioStreamPlayer2D track in tracks)
-			track.Finished += NextTrack;
 		
 		tracks[0].Play();
 	}
 
+	public void StopMusic()
+	{
+		tracks[currTrack].Stop();
+	}
 
 	private void NextTrack()
 	{

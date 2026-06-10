@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://fxq7nsgdeaar"]
+
+[ext_resource type="Script" uid="uid://cs8wkav68p2wi" path="res://Scripts/UI/Pause.cs" id="1_a111y"]
+[ext_resource type="PackedScene" uid="uid://fsvvwk43ij46" path="res://Scenes/UI/ui_button.tscn" id="1_goa2i"]
+[ext_resource type="PackedScene" uid="uid://daoa88i0s38jl" path="res://Scenes/UI/cursor.tscn" id="2_2ceew"]
+
+[node name="Pause" type="Control" unique_id=909701210]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_a111y")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=219096369]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.75
+offset_top = -47.125
+offset_right = 49.75
+offset_bottom = 47.125
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15294118, 0.15294118, 0.15294118, 0.63529414)
+
+[node name="Cursor" parent="." unique_id=436838560 instance=ExtResource("2_2ceew")]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1719730478]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -26.0
+offset_right = 21.5
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" parent="VBoxContainer" unique_id=29831465 instance=ExtResource("1_goa2i")]
+layout_mode = 2
+text = "RESUME"
+
+[node name="Exit" parent="VBoxContainer" unique_id=394353314 instance=ExtResource("1_goa2i")]
+layout_mode = 2
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
