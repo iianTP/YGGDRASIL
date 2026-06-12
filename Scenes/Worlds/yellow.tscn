@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://c420x786hy0r" path="res://Scenes/Worlds/world.tscn" id="1_7ohnn"]
 [ext_resource type="PackedScene" uid="uid://ct4tolgk0hoxb" path="res://Scenes/Interactables/portal.tscn" id="2_hx3rp"]
+[ext_resource type="PackedScene" uid="uid://duyltirh6hdrx" path="res://Scenes/Interactables/paper.tscn" id="3_lqgeu"]
+[ext_resource type="Texture2D" uid="uid://e3s8g5dcqrph" path="res://Assets/Hints/blue-hint.png" id="4_h734q"]
 
 [node name="Yellow" unique_id=596733837 node_paths=PackedStringArray("portals") instance=ExtResource("1_7ohnn")]
 portals = [NodePath("Portals/PortalW"), NodePath("Portals/PortalE"), NodePath("Portals/PortalS")]
@@ -30,3 +32,7 @@ position = Vector2(-579, 803)
 
 [node name="Player" parent="." index="4" unique_id=1833167824]
 position = Vector2(-103, -18)
+
+[node name="Paper" parent="." index="6" unique_id=89415710 instance=ExtResource("3_lqgeu")]
+position = Vector2(-256, 40)
+image = ExtResource("4_h734q")

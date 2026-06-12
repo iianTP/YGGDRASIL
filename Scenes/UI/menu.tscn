@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://daoa88i0s38jl" path="res://Scenes/UI/cursor.tscn" id="4_ugp1d"]
 [ext_resource type="PackedScene" uid="uid://fsvvwk43ij46" path="res://Scenes/UI/ui_button.tscn" id="5_ttkkf"]
 [ext_resource type="PackedScene" uid="uid://2y7bcw03ctkx" path="res://Scenes/vhs.tscn" id="5_ugp1d"]
+[ext_resource type="PackedScene" uid="uid://b3qmjf5cyb438" path="res://Scenes/UI/controls.tscn" id="7_rb4ur"]
+[ext_resource type="Script" uid="uid://dulcw3n0fgnbf" path="res://Scripts/UI/Controls.cs" id="8_4twqa"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u4yt8"]
 
@@ -34,6 +36,14 @@ scale = Vector2(4.5, 4.5)
 [node name="Cursor" parent="." unique_id=436838560 instance=ExtResource("4_ugp1d")]
 
 [node name="VHS" parent="." unique_id=1467181610 instance=ExtResource("5_ugp1d")]
+
+[node name="Controls" parent="." unique_id=1463637067 instance=ExtResource("7_rb4ur")]
+visible = false
+offset_left = 107.0
+offset_top = 188.0
+offset_right = 245.0
+offset_bottom = 242.0
+script = ExtResource("8_4twqa")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1060319450]
 anchors_preset = 14
@@ -67,6 +77,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 text = "Q U I T"
 
+[connection signal="mouse_entered" from="HBoxContainer/Play" to="Controls" method="_on_play_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Play" to="Controls" method="_on_play_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Config" to="." method="_on_config_pressed"]
 [connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]

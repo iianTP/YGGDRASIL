@@ -3,8 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://c420x786hy0r" path="res://Scenes/Worlds/world.tscn" id="1_4dru2"]
 [ext_resource type="PackedScene" uid="uid://dpdrw2ohtkf7x" path="res://Scenes/Interactables/teleport.tscn" id="2_hfbap"]
 [ext_resource type="PackedScene" uid="uid://ct4tolgk0hoxb" path="res://Scenes/Interactables/portal.tscn" id="2_ysgpd"]
-[ext_resource type="PackedScene" uid="uid://duyltirh6hdrx" path="res://Scenes/Interactables/paper.tscn" id="3_en31b"]
-[ext_resource type="Texture2D" uid="uid://e3s8g5dcqrph" path="res://Assets/Hints/blue-hint.png" id="4_ysgpd"]
 
 [node name="Orange" unique_id=596733837 node_paths=PackedStringArray("portals") instance=ExtResource("1_4dru2")]
 portals = [NodePath("Portals/PortalN"), NodePath("Portals/PortalS"), NodePath("Portals/PortalE")]
@@ -57,7 +55,7 @@ position = Vector2(213, -54)
 position = Vector2(-39, 6)
 
 [node name="TeleportExit" parent="Teleports/Teleport3" index="1" unique_id=1404257330]
-position = Vector2(125, -26)
+position = Vector2(121, -28)
 
 [node name="Teleport4" parent="Teleports" index="3" unique_id=1845594838 instance=ExtResource("2_hfbap")]
 position = Vector2(332, 42)
@@ -72,7 +70,7 @@ position = Vector2(-125, -124)
 position = Vector2(320, -53)
 
 [node name="TeleportEnter" parent="Teleports/Teleport5" index="0" unique_id=1896786702]
-position = Vector2(-20, 7)
+position = Vector2(52, 8)
 
 [node name="TeleportExit" parent="Teleports/Teleport5" index="1" unique_id=1404257330]
 position = Vector2(145, -27)
@@ -90,7 +88,7 @@ position = Vector2(-4, 62)
 position = Vector2(315, 139)
 
 [node name="TeleportEnter" parent="Teleports/Teleport7" index="0" unique_id=1896786702]
-position = Vector2(-13, 5)
+position = Vector2(-14, -188)
 
 [node name="TeleportExit" parent="Teleports/Teleport7" index="1" unique_id=1404257330]
 position = Vector2(184, 2)
@@ -102,7 +100,7 @@ position = Vector2(360, 41)
 position = Vector2(9, 7)
 
 [node name="TeleportExit" parent="Teleports/Teleport8" index="1" unique_id=1404257330]
-position = Vector2(-553, 260)
+position = Vector2(-56, 104)
 
 [node name="Teleport11" parent="Teleports" index="8" unique_id=1334443183 instance=ExtResource("2_hfbap")]
 position = Vector2(190, 43)
@@ -144,16 +142,12 @@ position = Vector2(267, -34)
 position = Vector2(366, -54)
 
 [node name="TeleportEnter" parent="Teleports/Teleport15" index="0" unique_id=1896786702]
-position = Vector2(2, 8)
+position = Vector2(3, 200)
 
 [node name="TeleportExit" parent="Teleports/Teleport15" index="1" unique_id=1404257330]
 position = Vector2(-126, 6)
 
-[node name="Paper" parent="." index="5" unique_id=1283312584 instance=ExtResource("3_en31b")]
-position = Vector2(-212, 333)
-image = ExtResource("4_ysgpd")
-
-[node name="Player" parent="." index="6" unique_id=1833167824]
+[node name="Player" parent="." index="5" unique_id=1833167824]
 position = Vector2(708, 225)
 
 [editable path="Teleports/Teleport"]
