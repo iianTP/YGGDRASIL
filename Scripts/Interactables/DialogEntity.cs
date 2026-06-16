@@ -19,7 +19,6 @@ public partial class DialogEntity : Interactable
 
 	protected override void Action()
 	{
-		TranslationServer.SetLocale("pt");
 		dialogBoxInstance = (DialogBox)dialogBox.Instantiate();
 		dialogBoxInstance.Position = new Vector2(-48,-90);
 		dialogBoxInstance.SetDisplay(GetDisplay());

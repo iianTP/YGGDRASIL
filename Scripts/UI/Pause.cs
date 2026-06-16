@@ -4,9 +4,14 @@ using System;
 public partial class Pause : Control
 {
 
+	[Export] private Button resume;
+	[Export] private Button exit;
+
 	public override void _Ready()
 	{
 		ProcessMode = ProcessModeEnum.Always;
+		resume.Text = Tr("BT_RESUME");
+		exit.Text = Tr("BT_EXIT");
 	}
 
 	public override void _Process(double delta)

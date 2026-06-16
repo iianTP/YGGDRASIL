@@ -16,6 +16,7 @@ public partial class DialogBox : TextureRect
 		}
 		else
 		{
+			displayText.Theme.DefaultFontSize = 8;
 			if (display.txt.StartsWith("\nREFLECT"))
 			 	displayText.Theme.DefaultFontSize = 7;
 			if (display.txt.StartsWith("\nREFLETIR"))

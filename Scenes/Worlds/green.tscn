@@ -17,7 +17,7 @@ position = Vector2(-269, -72)
 
 [node name="Paper" parent="." index="3" unique_id=577254267 instance=ExtResource("3_6m0j2")]
 position = Vector2(382, 170)
-dialogue = PackedStringArray("\"...and all was warm. then everything... everything went dark everything went cold.\"")
+dialogue = PackedStringArray("GREEN_HINT")
 
 [node name="Portals" type="Node2D" parent="." index="4" unique_id=1542692323]
 position = Vector2(195, -285)

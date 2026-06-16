@@ -20,6 +20,7 @@ public partial class Menu : CanvasLayer
 	{
 		Node world = initWorld.Instantiate();
 		AudioManager.Instance.StartMusic();
+		TravelManager.Instance.ResetPos();
 		GetTree().ChangeSceneToNode(world);
 	}
 

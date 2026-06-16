@@ -20,8 +20,6 @@ public partial class TravelManager : Node
 
 	public void Travel(Utils.Directions d)
 	{
-		
-
 		playerPos += Utils.Instance.AngleToDirection((int)d);
 
 		PackedScene w = GD.Load<PackedScene>($"res://Scenes/Worlds/{worlds[(int)playerPos.Y][(int)playerPos.X]}.tscn");
@@ -31,6 +29,11 @@ public partial class TravelManager : Node
 		world.PositionPlayer(arrivalPortal);
 		
 		GetTree().CallDeferred(SceneTree.MethodName.ChangeSceneToNode, world);
+	}
+
+	public void ResetPos()
+	{
+		playerPos = new Vector2(1,1);
 	}
 
 

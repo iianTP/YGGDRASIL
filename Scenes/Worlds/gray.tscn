@@ -30,6 +30,7 @@ position = Vector2(210, 348)
 
 [node name="OldGuy" parent="." index="5" unique_id=1896786702 instance=ExtResource("2_2ly0k")]
 position = Vector2(421, 345)
+dialogue = PackedStringArray("OLDGUY_1", "OLDGUY_2")
 
 [node name="Portals" type="Node2D" parent="." index="6" unique_id=779886220]
 

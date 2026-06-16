@@ -32,5 +32,5 @@ direction = -90
 position = Vector2(90, 545)
 
 [node name="Paper" parent="." index="5" unique_id=1589340409 instance=ExtResource("3_ng6v1")]
-position = Vector2(209, 657)
-dialogue = PackedStringArray("\"where the time left came to an end, it was redrawn and rebuilt of sand... again.\"")
+position = Vector2(209, 654)
+dialogue = PackedStringArray("PURPLE_HINT")
