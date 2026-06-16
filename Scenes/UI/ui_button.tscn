@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://fsvvwk43ij46"]
 
-[ext_resource type="FontFile" uid="uid://bldjgxb6ahkyn" path="res://Assets/runescape_uf.ttf" id="1_grme0"]
+[ext_resource type="FontFile" uid="uid://dg2wt3hrsipda" path="res://Assets/ModernDOS8x16.ttf" id="1_ymbfm"]
 [ext_resource type="Script" uid="uid://o1bv1mo0vvle" path="res://Scripts/UI/UiButton.cs" id="2_tnpna"]
 
 [sub_resource type="Theme" id="Theme_tnpna"]
-default_font = ExtResource("1_grme0")
+default_font = ExtResource("1_ymbfm")
 
 [node name="UIButton" type="Button" unique_id=29831465]
 offset_right = 82.905

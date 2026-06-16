@@ -8,8 +8,12 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u4yt8"]
 
-[node name="Config" type="CanvasLayer" unique_id=787137787]
+[node name="Config" type="CanvasLayer" unique_id=787137787 node_paths=PackedStringArray("musicBox", "lang", "reset", "save")]
 script = ExtResource("1_fhk0q")
+musicBox = NodePath("VBoxContainer/MusicBox")
+lang = NodePath("VBoxContainer/Lang")
+reset = NodePath("VBoxContainer/Reset")
+save = NodePath("VBoxContainer/Save")
 
 [node name="Background" type="TextureRect" parent="." unique_id=390847681]
 self_modulate = Color(0, 0, 0, 1)
@@ -45,7 +49,11 @@ layout_mode = 2
 button_pressed = true
 text = "SFX"
 
-[node name="Reset" parent="VBoxContainer" unique_id=29831465 instance=ExtResource("2_t3jhg")]
+[node name="Lang" parent="VBoxContainer" unique_id=29831465 instance=ExtResource("2_t3jhg")]
+layout_mode = 2
+text = "EN-US"
+
+[node name="Reset" parent="VBoxContainer" unique_id=2039818341 instance=ExtResource("2_t3jhg")]
 layout_mode = 2
 text = "RESET DATA"
 mainColor = Color(255.0139, 0, 0, 1)
@@ -56,5 +64,6 @@ text = "SAVE"
 
 [connection signal="toggled" from="VBoxContainer/MusicBox" to="." method="_on_music_box_toggled"]
 [connection signal="toggled" from="VBoxContainer/SfxBox" to="." method="_on_sfx_box_toggled"]
+[connection signal="pressed" from="VBoxContainer/Lang" to="." method="_on_lang_pressed"]
 [connection signal="pressed" from="VBoxContainer/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="VBoxContainer/Save" to="." method="_on_save_pressed"]

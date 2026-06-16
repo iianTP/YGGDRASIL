@@ -68,6 +68,10 @@ pause={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Assets/dialogues.en.translation", "res://Assets/dialogues.pt.translation")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

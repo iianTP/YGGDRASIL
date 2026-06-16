@@ -11,16 +11,6 @@ public partial class DialogEntity : Interactable
 	[Export] protected string[] dialogue;
 	private int dialogueIndex = 0;
 
-
-	public override void _Ready()
-	{
-		if (dialogue != null)
-			for (int i = 0; i < dialogue.Length; i++)
-				dialogue[i] = dialogue[i].Replace("\\n","\n");
-	}
-
-
-
 	public override void _on_area_exited(Area2D area)
 	{
 		if (area.IsInGroup("Player"))
@@ -29,6 +19,7 @@ public partial class DialogEntity : Interactable
 
 	protected override void Action()
 	{
+		TranslationServer.SetLocale("pt");
 		dialogBoxInstance = (DialogBox)dialogBox.Instantiate();
 		dialogBoxInstance.Position = new Vector2(-48,-90);
 		dialogBoxInstance.SetDisplay(GetDisplay());
@@ -50,7 +41,7 @@ public partial class DialogEntity : Interactable
 
 	private string GetDialogue()
 	{
-		string d = dialogue[dialogueIndex];
+		string d = Tr(dialogue[dialogueIndex]).Replace("\\n","\n");
 		dialogueIndex = (dialogueIndex + 1) % dialogue.Length;
 		return d;
 	}

@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://dlod0ib3c8kby" path="res://Assets/Interactables/dialog-box.png" id="1_1fwv3"]
 [ext_resource type="Script" uid="uid://cbw7sx2vh5abe" path="res://Scripts/Interactables/DialogBox.cs" id="2_vgjek"]
-[ext_resource type="FontFile" uid="uid://bldjgxb6ahkyn" path="res://Assets/runescape_uf.ttf" id="3_fgs58"]
+[ext_resource type="FontFile" uid="uid://dg2wt3hrsipda" path="res://Assets/ModernDOS8x16.ttf" id="3_fgs58"]
 
 [sub_resource type="Theme" id="Theme_fgs58"]
 default_font = ExtResource("3_fgs58")
-default_font_size = 9
+default_font_size = 8
 
 [node name="DialogBox" type="TextureRect" unique_id=1921442361 node_paths=PackedStringArray("displayImage", "displayText")]
 offset_right = 96.0

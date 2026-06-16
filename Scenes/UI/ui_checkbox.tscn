@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ba1bne27hrkyv"]
 
-[ext_resource type="FontFile" uid="uid://bldjgxb6ahkyn" path="res://Assets/runescape_uf.ttf" id="1_6c4ks"]
+[ext_resource type="FontFile" uid="uid://dg2wt3hrsipda" path="res://Assets/ModernDOS8x16.ttf" id="1_cdima"]
 
 [sub_resource type="Theme" id="Theme_6lc2h"]
-default_font = ExtResource("1_6c4ks")
+default_font = ExtResource("1_cdima")
 
 [node name="CheckBox" type="CheckBox" unique_id=1986163050]
 offset_right = 24.0

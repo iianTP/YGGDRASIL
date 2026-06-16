@@ -33,5 +33,5 @@ position = Vector2(141, 684)
 position = Vector2(746, -101)
 
 [node name="Paper" parent="." index="5" unique_id=1147957413 instance=ExtResource("3_wmvm3")]
-position = Vector2(815, 15)
-dialogue = PackedStringArray("\"from gloom to grace, ascend. and rest where return is nowhere.\"")
+position = Vector2(817, 16)
+dialogue = PackedStringArray("RED_HINT")

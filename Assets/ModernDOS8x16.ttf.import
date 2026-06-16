@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bldjgxb6ahkyn"
-path="res://.godot/imported/runescape_uf.ttf-280db514c8380cc1a20d0a6ddf244d99.fontdata"
+uid="uid://dg2wt3hrsipda"
+path="res://.godot/imported/ModernDOS8x16.ttf-d02c446b8cd7011811053971f88e7875.fontdata"
 
 [deps]
 
-source_file="res://Assets/runescape_uf.ttf"
-dest_files=["res://.godot/imported/runescape_uf.ttf-280db514c8380cc1a20d0a6ddf244d99.fontdata"]
+source_file="res://Assets/ModernDOS8x16.ttf"
+dest_files=["res://.godot/imported/ModernDOS8x16.ttf-d02c446b8cd7011811053971f88e7875.fontdata"]
 
 [params]
 

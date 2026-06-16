@@ -16,16 +16,16 @@ tile_map_data = PackedByteArray("AAABAAkAAQAAAAEAAAACAAkAAQABAAEAAAADAAkAAQABAAE
 position = Vector2(122, 792)
 
 [node name="Paper" parent="." index="3" unique_id=1363317426 instance=ExtResource("4_nery7")]
-position = Vector2(115, 1037)
-dialogue = PackedStringArray("REFLECT record  ponder \\n\\nforget     plan      copy \\n\\nMIRROR  wonder    LOG")
+position = Vector2(225, 1029)
+dialogue = PackedStringArray("BLACK_HINT")
 
 [node name="Player" parent="." index="4" unique_id=1833167824]
-position = Vector2(225, 1025)
+position = Vector2(199, 1035)
 
 [node name="Portals" type="Node2D" parent="." index="5" unique_id=502062573]
 position = Vector2(195, -285)
 
-[node name="PortalNE" parent="Portals" index="0" unique_id=1896786702 instance=ExtResource("2_te0q6")]
+[node name="PortalNE" parent="Portals" index="0" unique_id=1880788704 instance=ExtResource("2_te0q6")]
 position = Vector2(-1104, 654)
 direction = 135
 
