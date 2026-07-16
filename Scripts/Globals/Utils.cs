@@ -36,24 +36,4 @@ public partial class Utils : Node
 		else return d + 180;
 	}
 
-	public string[] GetFileLines(string filePath)
-	{
-		// Open the file for reading
-		using var file = FileAccess.Open(filePath, FileAccess.ModeFlags.Read);
-		
-		if (file == null)
-		{
-			GD.PrintErr($"Failed to open file: {filePath}");
-			return Array.Empty<string>();
-		}
-
-		// Read the whole file content into a single string
-		string fileText = file.GetAsText();
-
-		// Split text by newline. Using true removes trailing carriage returns (\r)
-		string[] lines = fileText.Split("\n", System.StringSplitOptions.None);
-		
-		return lines;
-	}
-
 }

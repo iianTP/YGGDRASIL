@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://caym8kmh36jg3"]
+
+[ext_resource type="Script" uid="uid://btgeven8x78o3" path="res://Scripts/Trailer.cs" id="1_jieuj"]
+[ext_resource type="PackedScene" uid="uid://b4om2cpmp418a" path="res://Scenes/UI/logo.tscn" id="3_hs8ms"]
+[ext_resource type="PackedScene" uid="uid://2y7bcw03ctkx" path="res://Scenes/vhs.tscn" id="4_iwmku"]
+[ext_resource type="PackedScene" uid="uid://b3qmjf5cyb438" path="res://Scenes/UI/controls.tscn" id="4_sxl85"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u4yt8"]
+
+[node name="Trailer" type="CanvasLayer" unique_id=1407137969 node_paths=PackedStringArray("letters", "outNow", "logoTimer", "outNowTimer")]
+script = ExtResource("1_jieuj")
+letters = [NodePath("Logo/Y"), NodePath("Logo/G1"), NodePath("Logo/G2"), NodePath("Logo/D"), NodePath("Logo/R"), NodePath("Logo/A"), NodePath("Logo/S"), NodePath("Logo/I"), NodePath("Logo/L")]
+outNow = NodePath("OutNow")
+logoTimer = NodePath("TimerLogo")
+outNowTimer = NodePath("TimerOutnow")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1892605923]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = -17.0
+offset_top = -36.0
+offset_right = 665.0
+offset_bottom = 391.0
+texture = SubResource("PlaceholderTexture2D_u4yt8")
+metadata/_edit_use_anchors_ = true
+
+[node name="Logo" parent="." unique_id=257269136 instance=ExtResource("3_hs8ms")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.5, 4.5)
+
+[node name="VHS" parent="." unique_id=1467181610 instance=ExtResource("4_iwmku")]
+
+[node name="TimerLogo" type="Timer" parent="." unique_id=1980398993]
+wait_time = 150.0
+
+[node name="OutNow" parent="." unique_id=1463637067 instance=ExtResource("4_sxl85")]
+visible = false
+modulate = Color(1, 0, 0, 1)
+offset_left = 153.0
+offset_top = 270.0
+offset_right = 291.0
+offset_bottom = 288.0
+text = "OUT NOW ON ITCH.IO"
+
+[node name="TimerOutnow" type="Timer" parent="." unique_id=206384070]
+wait_time = 5.0
+
+[editable path="Logo"]
+[editable path="Logo/Y"]

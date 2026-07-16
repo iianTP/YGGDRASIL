@@ -10,9 +10,14 @@ public partial class Letter : AnimatedSprite2D
 	{
 		if (PathManager.Instance.SolvedIdList.Contains((int)letter))
 		{
-			Play("show");
-			Frame = (int)letter;
+			DisplayLetter();
 		}		
+	}
+
+	public void DisplayLetter()
+	{
+		Play("show");
+		Frame = (int)letter;
 	}
 
 }
