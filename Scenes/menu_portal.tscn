@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://di2t75vrutcgq"]
+
+[ext_resource type="Script" uid="uid://ddwhnysqn4ur4" path="res://Scripts/MenuPortal.cs" id="1_ael3t"]
+
+[sub_resource type="Gradient" id="Gradient_7mdm7"]
+interpolation_color_space = 1
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mof6"]
+size = Vector2(22, 10)
+
+[node name="MenuPortal" type="Area2D" unique_id=554134165]
+script = ExtResource("1_ael3t")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1346273417]
+amount = 38
+emission_shape = 3
+emission_rect_extents = Vector2(13.36, 1)
+gravity = Vector2(0, -50)
+scale_amount_max = 2.0
+color_ramp = SubResource("Gradient_7mdm7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=231160044]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_5mof6")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

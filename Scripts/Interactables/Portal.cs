@@ -24,7 +24,7 @@ public partial class Portal : Interactable
 	protected override void Action()
 	{
 		if (active)
-			tm.Travel(direction);
+			Vignette.Instance.Transition(1,0.25f,1,1,()=>{tm.Travel(direction);});
 	}
 
 	public Utils.Directions GetDirection()

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://0ktyrv0s4v12"]
+
+[ext_resource type="Script" uid="uid://dltbtdrl54aeh" path="res://Scripts/Vignette.cs" id="1_x7oxg"]
+
+[node name="Vignette" type="Control" unique_id=772970857 node_paths=PackedStringArray("vignette")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x7oxg")
+vignette = NodePath("ColorRect")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=114827716]
+layout_mode = 0
+offset_left = -234.0
+offset_top = -93.0
+offset_right = 885.0
+offset_bottom = 408.0
+color = Color(0, 0, 0, 0)

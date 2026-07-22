@@ -1,102 +1,94 @@
-[gd_scene format=3 uid="uid://reyot4i0hrao"]
+[gd_scene format=3 uid="uid://bwj3kypp8pcah"]
 
-[ext_resource type="Script" uid="uid://cfgtykd3slupv" path="res://Scripts/Player.cs" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://rlk5mx85oc4r" path="res://Assets/Player/gray-player.png" id="2_6t5aa"]
-[ext_resource type="Texture2D" uid="uid://dty88ovytr5d6" path="res://Assets/Player/black-player.png" id="2_x3wgy"]
-[ext_resource type="Texture2D" uid="uid://bl2487nhdwbwq" path="res://Assets/Player/blue-player.png" id="3_gymyn"]
-[ext_resource type="Texture2D" uid="uid://iec300ovr2jr" path="res://Assets/Player/red-player.png" id="4_3smsa"]
-[ext_resource type="Texture2D" uid="uid://jy44uybvx6bh" path="res://Assets/Player/white-player.png" id="5_8erm5"]
-[ext_resource type="Texture2D" uid="uid://dod6835a8ho6g" path="res://Assets/Player/green-player.png" id="5_pu2lt"]
-[ext_resource type="Texture2D" uid="uid://ddp8usdwjp85p" path="res://Assets/Player/orange-player.png" id="6_ukyrk"]
-[ext_resource type="Texture2D" uid="uid://caw0w6aojnn1s" path="res://Assets/Player/purple-player.png" id="7_7dp3o"]
-[ext_resource type="Texture2D" uid="uid://cmy1laqjjr02l" path="res://Assets/Player/pink-player.png" id="7_gymyn"]
-[ext_resource type="Texture2D" uid="uid://3ijojsvvu3b" path="res://Assets/Player/yellow-player.png" id="10_h4iuc"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
-radius = 10.049875
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f1ek2"]
-radius = 9.0
-height = 28.0
+[ext_resource type="Texture2D" uid="uid://dty88ovytr5d6" path="res://Assets/Player/black-player.png" id="1_a6nw3"]
+[ext_resource type="Texture2D" uid="uid://bl2487nhdwbwq" path="res://Assets/Player/blue-player.png" id="2_b4syp"]
+[ext_resource type="Texture2D" uid="uid://rlk5mx85oc4r" path="res://Assets/Player/gray-player.png" id="3_f10bm"]
+[ext_resource type="Texture2D" uid="uid://dod6835a8ho6g" path="res://Assets/Player/green-player.png" id="4_jcef7"]
+[ext_resource type="Texture2D" uid="uid://ddp8usdwjp85p" path="res://Assets/Player/orange-player.png" id="5_njxey"]
+[ext_resource type="Texture2D" uid="uid://cmy1laqjjr02l" path="res://Assets/Player/pink-player.png" id="6_y54i2"]
+[ext_resource type="Texture2D" uid="uid://caw0w6aojnn1s" path="res://Assets/Player/purple-player.png" id="7_mc8fj"]
+[ext_resource type="Texture2D" uid="uid://iec300ovr2jr" path="res://Assets/Player/red-player.png" id="8_letlb"]
+[ext_resource type="Texture2D" uid="uid://jy44uybvx6bh" path="res://Assets/Player/white-player.png" id="9_c10ti"]
+[ext_resource type="Texture2D" uid="uid://3ijojsvvu3b" path="res://Assets/Player/yellow-player.png" id="10_e2i2b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
-atlas = ExtResource("2_x3wgy")
+atlas = ExtResource("1_a6nw3")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
-atlas = ExtResource("2_x3wgy")
+atlas = ExtResource("1_a6nw3")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fd4e3"]
-atlas = ExtResource("3_gymyn")
+atlas = ExtResource("2_b4syp")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qqcod"]
-atlas = ExtResource("3_gymyn")
+atlas = ExtResource("2_b4syp")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
-atlas = ExtResource("2_6t5aa")
+atlas = ExtResource("3_f10bm")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
-atlas = ExtResource("2_6t5aa")
+atlas = ExtResource("3_f10bm")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_igrcy"]
-atlas = ExtResource("5_pu2lt")
+atlas = ExtResource("4_jcef7")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fs7ks"]
-atlas = ExtResource("5_pu2lt")
+atlas = ExtResource("4_jcef7")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6n3p"]
-atlas = ExtResource("6_ukyrk")
+atlas = ExtResource("5_njxey")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_olqyp"]
-atlas = ExtResource("6_ukyrk")
+atlas = ExtResource("5_njxey")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h4iuc"]
-atlas = ExtResource("7_gymyn")
+atlas = ExtResource("6_y54i2")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0gysh"]
-atlas = ExtResource("7_gymyn")
+atlas = ExtResource("6_y54i2")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wpjfl"]
-atlas = ExtResource("7_7dp3o")
+atlas = ExtResource("7_mc8fj")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bi64h"]
-atlas = ExtResource("7_7dp3o")
+atlas = ExtResource("7_mc8fj")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
-atlas = ExtResource("4_3smsa")
+atlas = ExtResource("8_letlb")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
-atlas = ExtResource("4_3smsa")
+atlas = ExtResource("8_letlb")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
-atlas = ExtResource("5_8erm5")
+atlas = ExtResource("9_c10ti")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
-atlas = ExtResource("5_8erm5")
+atlas = ExtResource("9_c10ti")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2ijsl"]
-atlas = ExtResource("10_h4iuc")
+atlas = ExtResource("10_e2i2b")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p1odr"]
-atlas = ExtResource("10_h4iuc")
+atlas = ExtResource("10_e2i2b")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8erm5"]
@@ -262,30 +254,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=1833167824 node_paths=PackedStringArray("as2d")]
-script = ExtResource("1_cvnsp")
-as2d = NodePath("AnimatedSprite2D")
-speed = 150
-jump_force = 350
-maxFallSpeed = 400.0
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1773322148 groups=["Player"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1916908412]
-position = Vector2(0, 2)
-shape = SubResource("CircleShape2D_cvnsp")
-debug_color = Color(0.80899626, 0.0022305716, 0.98990375, 0.41960785)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1379120649]
-position = Vector2(0, 2)
-shape = SubResource("CapsuleShape2D_f1ek2")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1013154958]
-z_index = 1
+[node name="Npc" type="AnimatedSprite2D" unique_id=1752715016]
+z_index = -1
 sprite_frames = SubResource("SpriteFrames_8erm5")
 animation = &"Gray_idle"
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=825930922]
-zoom = Vector2(1.015, 1.015)
-process_callback = 0
-position_smoothing_enabled = true

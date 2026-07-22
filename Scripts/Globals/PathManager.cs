@@ -7,7 +7,7 @@ public partial class PathManager : Node
 {
 	public static PathManager Instance { get; private set; }
 
-	public List<string> SolvedList { get; private set; } = [];
+	// public List<string> SolvedList { get; private set; } = [];
 	public List<int> SolvedIdList { get; private set; } = [];
 	private int solvedCount = 0;
 	private bool started = false;
@@ -58,6 +58,11 @@ public partial class PathManager : Node
 		return solvedCount >= 9;
 	}
 
+	public bool SolvedSecretPuzzle()
+	{
+		return SolvedIdList.Contains(10);
+	}
+
 	private void CheckSolution()
 	{
 		ConfigFile cf = Utils.Instance.cf;
@@ -68,11 +73,10 @@ public partial class PathManager : Node
 		if (cf.GetSections().Contains(path))
 			id = (int)cf.GetValue(path,"id");
 
-		if (id == -1 || SolvedIdList.Contains(id))
+		if (id == -1 || SolvedIdList.Contains(id) || (id == 10 && !SolvedAllPuzzles()))
 			AudioManager.Instance.PlaySfx("fail");
 		else
 		{
-
 			SolvedIdList.Add(id);
 			
 			cf.Clear();

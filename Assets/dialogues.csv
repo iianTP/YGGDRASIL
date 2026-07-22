@@ -1,13 +1,16 @@
 keys;en;pt
 OLDGUY_1;Buttons... the very start and the end of everything.;Botões... o absoluto começo e o fim de tudo.
 OLDGUY_2;'X' marks the pirate, said the spots.;'X' marca o pirata, diziam os tesouros.
-OLDGUY_3;Yes, the exit is sealed. Why do you think I'm still here?;Sim, a saída está selada. Por que acha que ainda estou aqui?
+OLDGUY_3;The second rainbow. It awaits being traversed...;O segundo arco-íris. Ele aguarda ser percorrido...
+OLDGUY_4;Now, I may as well rest...;Bom, acho que também posso descansar...
+OLDGUY_5;YGGDRASIL is in good hands once more.;YGGDRASIL está em boas mãos mais uma vez.
+OLDGUY_X;Yes, the exit is sealed. Why do you think I'm still here?;Sim, a saída está selada. Por que acha que ainda estou aqui?
 BLACK_HINT;\nREFLECT record ponder\n\nforget  plan   copy \n\nMIRROR  wonder LOG;\nREFLETIR recordar ponderar\n\nesquecer planejar copiar\n\nESPELHAR imaginar GRAVAR
 GREEN_HINT;"""...and all was warm. then everything... everything went dark everything went cold.""";"""...e tudo era caloroso. então tudo... tudo ficou escuro, tudo ficou frio."""
 PURPLE_HINT;"""where the time left came to an end, it was redrawn and rebuilt of sand... again.""";"""no antro de emoções, o tempo chegou ao fim. então, ele foi redesenhado e reconstruído da areia mais uma vez."""
 RED_HINT;"""from gloom to grace, ascend. and rest where return is nowhere.""";"""das trevas  à graça, ascenda. e descanse onde retorno inexiste."""
 BT_PLAY;P L A Y;J O G A R
-BT_CONFIG;C O N F I G;C O N F I G
+BT_CONFIG;S E T T I N G S;C O N F I G
 BT_QUIT;Q U I T;S A I R
 BT_RESUME;RESUME;CONTINUAR
 BT_EXIT;EXIT;SAIR

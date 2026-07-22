@@ -6,6 +6,7 @@ public partial class AudioManager : Node
 	public static AudioManager Instance { get; private set; }
 
 	[Export] private AudioStreamPlayer2D[] tracks;
+	[Export] private AudioStreamPlayer2D secretTrack;
 
 	[Export] private AudioStreamPlayer2D click;
 	[Export] private AudioStreamPlayer2D success;
@@ -34,12 +35,23 @@ public partial class AudioManager : Node
 	public void StopMusic()
 	{
 		tracks[currTrack].Stop();
+		currTrack = 0;
 	}
 
 	private void NextTrack()
 	{
 		currTrack = (currTrack + 1) % tracks.Length;
 		tracks[currTrack].Play();
+	}
+
+	public void PlaySecretTrack()
+	{
+		secretTrack.Play();
+	}
+
+	public void StopSecretTrack()
+	{
+		secretTrack.Stop();
 	}
 
 	public void PlaySfx(string sfx)

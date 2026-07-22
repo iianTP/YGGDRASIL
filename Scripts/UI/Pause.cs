@@ -32,6 +32,7 @@ public partial class Pause : Control
 	public void _on_exit_pressed()
 	{
 		GetTree().Paused = false;
+		AudioManager.Instance.StopSecretTrack();
 		AudioManager.Instance.StopMusic();
 		GetTree().ChangeSceneToFile("res://Scenes/UI/menu.tscn");
 	}

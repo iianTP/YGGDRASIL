@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://fi563vtd583o"]
+
+[ext_resource type="PackedScene" uid="uid://bya2888fhee1u" path="res://Scenes/Interactables/interactable.tscn" id="1_olwfu"]
+[ext_resource type="Texture2D" uid="uid://ii1hx5f1sh4v" path="res://Assets/door.png" id="2_8l2uc"]
+[ext_resource type="Script" uid="uid://bdb27ak2b8ioo" path="res://Scripts/Interactables/Door.cs" id="2_j2o8d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2o8d"]
+size = Vector2(12, 22)
+
+[node name="Door" unique_id=1896786702 instance=ExtResource("1_olwfu")]
+script = ExtResource("2_j2o8d")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=16521990]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_j2o8d")
+
+[node name="Sprite2D" parent="." index="1" unique_id=466778605]
+texture = ExtResource("2_8l2uc")

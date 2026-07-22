@@ -3,25 +3,37 @@ using System;
 
 public partial class Menu : CanvasLayer
 {
-	[Export] private PackedScene initWorld;
 
 	[Export] private Button play;
+	[Export] private Button config;
 	[Export] private Button quit;
 	[Export] private Controls controls;
+
+	[Export] private Vignette vignette;
+	[Export] private HBoxContainer hbc;
+	[Export] private TextureRect vhs;
 
 	public override void _Ready()
 	{
 		play.Text = Tr("BT_PLAY");
+		config.Text = Tr("BT_CONFIG");
 		quit.Text = Tr("BT_QUIT");
 		controls.Text = Tr("CONTROLS");
+
+		// AudioManager.Instance.StopMusic();
+		
+		vignette.SetBlack(0);
+
+		if (vhs.Material is ShaderMaterial s)
+			s.SetShaderParameter("aberration",0.01);
+
 	}
 
 	public void _on_play_pressed()
 	{
-		Node world = initWorld.Instantiate();
-		AudioManager.Instance.StartMusic();
-		TravelManager.Instance.ResetPos();
-		GetTree().ChangeSceneToNode(world);
+		AudioManager.Instance.StopSecretTrack();
+		hbc.Hide();
+		vignette.Transition(1,1,3,4,StartGame);
 	}
 
 	public void _on_config_pressed()
@@ -32,5 +44,12 @@ public partial class Menu : CanvasLayer
 	public void _on_quit_pressed()
 	{
 		GetTree().Quit();
+	}
+
+	private void StartGame()
+	{
+		AudioManager.Instance.StartMusic();
+		TravelManager.Instance.ResetPos();
+		GetTree().ChangeSceneToFile("res://Scenes/Worlds/gray.tscn");
 	}
 }
