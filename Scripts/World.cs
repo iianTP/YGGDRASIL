@@ -12,6 +12,8 @@ public partial class World : Node2D
 
 	public override void _Ready()
 	{
+		Utils.Instance.UpdateRichPresence("update_location", Name);
+		
 		pm = PathManager.Instance;
 
 		RenderingServer.SetDefaultClearColor(backgroundColor);

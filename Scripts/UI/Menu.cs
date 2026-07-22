@@ -20,7 +20,8 @@ public partial class Menu : CanvasLayer
 		quit.Text = Tr("BT_QUIT");
 		controls.Text = Tr("CONTROLS");
 
-		// AudioManager.Instance.StopMusic();
+		Utils.Instance.UpdateRichPresence("clear_location");
+		Utils.Instance.UpdateRichPresence("update_details", "In Menu");
 		
 		vignette.SetBlack(0);
 
@@ -50,6 +51,7 @@ public partial class Menu : CanvasLayer
 	{
 		AudioManager.Instance.StartMusic();
 		TravelManager.Instance.ResetPos();
+		Utils.Instance.UpdateRichPresence("update_details", "Wandering...");
 		GetTree().ChangeSceneToFile("res://Scenes/Worlds/gray.tscn");
 	}
 }

@@ -8,6 +8,8 @@ public partial class Utils : Node
 	public readonly ConfigFile cf = new ConfigFile();
 	public readonly Random rng = new Random();
 
+	private Node dm;
+
 	public enum Directions
 	{
 		NE = 135, N = 180, NW = -135,
@@ -34,6 +36,16 @@ public partial class Utils : Node
 	{
 		if (d > 0) return d - 180;
 		else return d + 180;
+	}
+
+	public void UpdateRichPresence(string function, Variant param = default)
+	{
+		dm ??= GetNode<Node>("/root/DiscordManager");
+
+		if (param.VariantType == Variant.Type.Nil)
+			dm.Call(function);
+		else
+			dm.Call(function, param);
 	}
 
 }

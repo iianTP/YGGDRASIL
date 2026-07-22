@@ -46,6 +46,7 @@ public partial class AudioManager : Node
 
 	public void PlaySecretTrack()
 	{
+		if (!musicOn) return;
 		secretTrack.Play();
 	}
 

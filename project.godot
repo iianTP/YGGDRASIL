@@ -22,6 +22,8 @@ Utils="*uid://db3dmiicmbap5"
 TravelManager="*uid://c3mjhfh8xrgs6"
 PathManager="*uid://c8ndqegtbcxjc"
 Music="*uid://quj87hnxo2q5"
+DiscordRPCLoader="*uid://bqcah8vsic3gn"
+DiscordManager="*uid://yr4iyc8f3gka"
 
 [display]
 
@@ -35,6 +37,10 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="navigation-puzzle"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/discord-rpc-gd/plugin.cfg")
 
 [input]
 

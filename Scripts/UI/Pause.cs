@@ -18,6 +18,7 @@ public partial class Pause : Control
 	{
 		if (Input.IsActionJustPressed("pause"))
 		{
+			Utils.Instance.UpdateRichPresence("update_details", "Paused");
 			GetTree().Paused = true;
 			Show();
 		}
@@ -27,6 +28,7 @@ public partial class Pause : Control
 	{
 		Hide();
 		GetTree().Paused = false;
+		Utils.Instance.UpdateRichPresence("update_details", "Wandering...");
 	}
 
 	public void _on_exit_pressed()

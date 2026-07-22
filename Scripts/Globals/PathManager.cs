@@ -13,7 +13,6 @@ public partial class PathManager : Node
 	private bool started = false;
 	private string path = "";
 
-
 	public override void _Ready()
 	{
 		Instance = this;
@@ -77,6 +76,8 @@ public partial class PathManager : Node
 			AudioManager.Instance.PlaySfx("fail");
 		else
 		{
+			
+			
 			SolvedIdList.Add(id);
 			
 			cf.Clear();
@@ -85,6 +86,9 @@ public partial class PathManager : Node
 			cf.Save("user://solved.cfg");
 
 			solvedCount++;
+
+			Utils.Instance.UpdateRichPresence("update_state",solvedCount);
+
 			AudioManager.Instance.PlaySfx("success");	
 		}
 	}
@@ -93,7 +97,14 @@ public partial class PathManager : Node
 	{
 		SolvedIdList = [];
 		solvedCount = 0;
+		Utils.Instance.UpdateRichPresence("update_state",solvedCount);
 	}
 
+	public int PuzzlesSolved()
+	{
+		return solvedCount;
+	}
+
+	
 
 }
