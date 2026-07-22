@@ -2,13 +2,13 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://mf8w7n2durxj"
-path="res://.godot/imported/beyond-the-gates.ogg-67bc679e01278fc12b260845749ef7b4.oggvorbisstr"
+uid="uid://vhw84p1o6n5t"
+path="res://.godot/imported/Beyond-the-Gates.ogg-145632194983b0a680c36a875f2905a7.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/Music/beyond-the-gates.ogg"
-dest_files=["res://.godot/imported/beyond-the-gates.ogg-67bc679e01278fc12b260845749ef7b4.oggvorbisstr"]
+source_file="res://Assets/Music/Beyond-the-Gates.ogg"
+dest_files=["res://.godot/imported/Beyond-the-Gates.ogg-145632194983b0a680c36a875f2905a7.oggvorbisstr"]
 
 [params]
 

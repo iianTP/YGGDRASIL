@@ -13,13 +13,17 @@ public partial class Vignette : Control
 		Instance = this;
 		
 		if (Owner.Name == "Pink")
+		{
 			SetWhite(1);
+			Transition(0,0.01f,10,13,()=>{});
+		}
+		else if (Owner.Name == "Menu")
+			SetBlack(0);
 		else
+		{
 			SetBlack(1);
-
-		if (Owner.Name != "Menu")
 			Transition(0,0.01f,1,2,()=>{});
-		
+		}
 	}
 
 	public void Transition(float finalTr, float finalAb, float transitionTime, float aberrationTime, Action action)

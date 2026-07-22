@@ -8,7 +8,7 @@ public partial class Door : Interactable
 
 	public override void _Ready()
 	{
-		if (PathManager.Instance.SolvedSecretPuzzle())
+		// if (PathManager.Instance.SolvedSecretPuzzle())
 			GlobalPosition = solvedCoords;
 	}
 

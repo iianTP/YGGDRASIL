@@ -8,14 +8,14 @@
 [ext_resource type="AudioStream" uid="uid://d16oe4i5a7uy4" path="res://Assets/Music/Freeze.ogg" id="6_7kqwi"]
 [ext_resource type="AudioStream" uid="uid://djyi2sxenxixp" path="res://Assets/Music/fase2.ogg" id="7_e285m"]
 [ext_resource type="AudioStream" uid="uid://bcga8ce665pay" path="res://Assets/Music/success.ogg" id="8_8168a"]
-[ext_resource type="AudioStream" uid="uid://mf8w7n2durxj" path="res://Assets/Music/beyond-the-gates.ogg" id="8_njb7d"]
+[ext_resource type="AudioStream" uid="uid://vhw84p1o6n5t" path="res://Assets/Music/Beyond-the-Gates.ogg" id="8_njb7d"]
 [ext_resource type="AudioStream" uid="uid://d3x0piqql26dv" path="res://Assets/Music/fail.ogg" id="9_tguop"]
 [ext_resource type="AudioStream" uid="uid://xkamg72odhtq" path="res://Assets/Music/click.ogg" id="10_d3c6v"]
 
 [node name="Sounds" type="Node2D" unique_id=1534513046 node_paths=PackedStringArray("tracks", "secretTrack", "click", "success", "fail")]
 script = ExtResource("1_n2lyl")
 tracks = [NodePath("Music/lobby"), NodePath("Music/world2"), NodePath("Music/world1"), NodePath("Music/fase2"), NodePath("Music/Freeze"), NodePath("Music/world3")]
-secretTrack = NodePath("Music/Beyond The Gates")
+secretTrack = NodePath("Music/Beyond the Gates")
 click = NodePath("Sfx/click")
 success = NodePath("Sfx/success")
 fail = NodePath("Sfx/fail")
@@ -52,7 +52,7 @@ stream = ExtResource("7_e285m")
 attenuation = 0.0
 panning_strength = 0.0
 
-[node name="Beyond The Gates" type="AudioStreamPlayer2D" parent="Music" unique_id=983289529]
+[node name="Beyond the Gates" type="AudioStreamPlayer2D" parent="Music" unique_id=983289529]
 stream = ExtResource("8_njb7d")
 volume_db = -5.0
 attenuation = 0.0
