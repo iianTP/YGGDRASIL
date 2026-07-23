@@ -17,6 +17,6 @@ public partial class MenuPortal : Interactable
 
 	private void GoToMenu()
 	{
-		GetTree().ChangeSceneToFile("Scenes/UI/Menu.tscn");
+		GetTree().ChangeSceneToFile("Scenes/UI/menu.tscn");
 	}
 }
