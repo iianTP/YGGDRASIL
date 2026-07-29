@@ -33,7 +33,7 @@ public partial class Config : CanvasLayer
 
 	public void _on_reset_pressed()
 	{
-		ConfigFile cf = Utils.Instance.cf;
+		ConfigFile cf = new ConfigFile();
 		cf.Clear();
 		cf.Save("user://solved.cfg");
 		PathManager.Instance.ClearSolvedPuzzles();

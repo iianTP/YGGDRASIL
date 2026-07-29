@@ -7,7 +7,6 @@ public partial class PathManager : Node
 {
 	public static PathManager Instance { get; private set; }
 
-	// public List<string> SolvedList { get; private set; } = [];
 	public List<int> SolvedIdList { get; private set; } = [];
 	private int solvedCount = 0;
 	private bool started = false;
@@ -21,7 +20,7 @@ public partial class PathManager : Node
 
 	private void LoadPuzzlesSolved()
 	{
-		ConfigFile cf = Utils.Instance.cf;
+		ConfigFile cf = new ConfigFile();
 
 		cf.Load("user://solved.cfg");
 
@@ -64,13 +63,15 @@ public partial class PathManager : Node
 
 	private void CheckSolution()
 	{
-		ConfigFile cf = Utils.Instance.cf;
+		ConfigFile solutionsCf = new ConfigFile();
 
-		cf.Load("res://Assets/Patterns/solutions.cfg");
+		solutionsCf.Load("res://Assets/Patterns/solutions.cfg");
 
 		int id = -1;
-		if (cf.GetSections().Contains(path))
-			id = (int)cf.GetValue(path,"id");
+		if (solutionsCf.GetSections().Contains(path))
+			id = (int)solutionsCf.GetValue(path,"id");
+
+		
 
 		if (id == -1 || SolvedIdList.Contains(id) || (id == 10 && !SolvedAllPuzzles()))
 			AudioManager.Instance.PlaySfx("fail");
@@ -79,11 +80,13 @@ public partial class PathManager : Node
 			
 			
 			SolvedIdList.Add(id);
+
+			ConfigFile solvedCf = new ConfigFile();
 			
-			cf.Clear();
-			cf.Load("user://solved.cfg");
-			cf.SetValue($"{id}","success",true);
-			cf.Save("user://solved.cfg");
+			solvedCf.Clear();
+			solvedCf.Load("user://solved.cfg");
+			solvedCf.SetValue($"{id}","success",true);
+			solvedCf.Save("user://solved.cfg");
 
 			solvedCount++;
 

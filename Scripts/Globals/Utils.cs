@@ -5,7 +5,6 @@ public partial class Utils : Node
 {
 	public static Utils Instance { get; private set; }
 
-	public readonly ConfigFile cf = new ConfigFile();
 	public readonly Random rng = new Random();
 
 	private Node dm;
