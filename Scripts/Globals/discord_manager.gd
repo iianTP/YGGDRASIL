@@ -1,7 +1,7 @@
 extends Node
 func _ready():
 	DiscordRPC.app_id = 1529291037934354463
-	DiscordRPC.details = "Puzzles solved: %d/9" % PathManager.PuzzlesSolved()
+	DiscordRPC.details = "In Menu"
 	DiscordRPC.state = "Puzzles solved: %d/9" % PathManager.PuzzlesSolved()
 	DiscordRPC.large_image = "logo" 
 	DiscordRPC.start_timestamp = int(Time.get_unix_time_from_system())

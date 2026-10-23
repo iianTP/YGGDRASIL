@@ -4,6 +4,8 @@ using System;
 public partial class Config : CanvasLayer
 {
 	[Export] private CheckBox musicBox;
+	[Export] private CheckBox sfxBox;
+
 	[Export] private Button lang;
 	[Export] private Button reset;
 	[Export] private Button save;
@@ -14,6 +16,8 @@ public partial class Config : CanvasLayer
 
 	public override void _Ready()
 	{
+		musicBox.ButtonPressed = AudioManager.Instance.MusicOn;
+		sfxBox.ButtonPressed = AudioManager.Instance.SfxOn;
 		UpdateText();
 	}
 

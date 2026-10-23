@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cogqbl658vqlm" path="res://Scenes/Interactables/old_guy.tscn" id="2_2ly0k"]
 [ext_resource type="PackedScene" uid="uid://fi563vtd583o" path="res://Scenes/Interactables/door.tscn" id="2_5mwr6"]
 [ext_resource type="PackedScene" uid="uid://ct4tolgk0hoxb" path="res://Scenes/Interactables/portal.tscn" id="3_iyk65"]
-[ext_resource type="PackedScene" uid="uid://rcks162a86ee" path="res://Scenes/solution_map.tscn" id="5_52dtb"]
+[ext_resource type="PackedScene" uid="uid://rcks162a86ee" path="res://Scenes/Paths/solution_map.tscn" id="5_52dtb"]
 [ext_resource type="PackedScene" uid="uid://duyltirh6hdrx" path="res://Scenes/Interactables/paper.tscn" id="6_52dtb"]
 [ext_resource type="Texture2D" uid="uid://bqqjodionpcp6" path="res://Assets/Hints/black-hint.png" id="7_5mwr6"]
 
@@ -293,7 +293,7 @@ tile_map_data = PackedByteArray("AAAIAAsABQACAAAAAAALAAsABQAAAAAAAAAHAAsABQABAAA
 
 [node name="OldGuy" parent="." index="5" unique_id=1123338625 instance=ExtResource("2_2ly0k")]
 position = Vector2(421, 345)
-dialogue = PackedStringArray("OLDGUY_1", "OLDGUY_2")
+dialogue = PackedStringArray("OLDGUY_2")
 
 [node name="Portals" type="Node2D" parent="." index="6" unique_id=779886220]
 

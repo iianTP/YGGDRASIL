@@ -36,11 +36,12 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 1.22
 shader_parameter/vignette_opacity = 0.5
 
-[node name="Menu" type="CanvasLayer" unique_id=1407137969 node_paths=PackedStringArray("play", "config", "quit", "controls", "vignette", "hbc", "vhs")]
+[node name="Menu" type="CanvasLayer" unique_id=1407137969 node_paths=PackedStringArray("play", "config", "quit", "bifrost", "controls", "vignette", "hbc", "vhs")]
 script = ExtResource("1_tjcm1")
 play = NodePath("HBoxContainer/Play")
 config = NodePath("HBoxContainer/Config")
 quit = NodePath("HBoxContainer/Quit")
+bifrost = NodePath("Bifrost")
 controls = NodePath("Controls")
 vignette = NodePath("Vignette")
 hbc = NodePath("HBoxContainer")
@@ -113,8 +114,17 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 text = "Q U I T"
 
+[node name="Bifrost" parent="." unique_id=1461006651 instance=ExtResource("5_ttkkf")]
+visible = false
+offset_left = 56.0
+offset_top = 21.0
+offset_right = 168.0
+offset_bottom = 45.0
+text = "b i f r o s t"
+
 [connection signal="mouse_entered" from="HBoxContainer/Play" to="Controls" method="_on_play_mouse_entered"]
 [connection signal="mouse_exited" from="HBoxContainer/Play" to="Controls" method="_on_play_mouse_exited"]
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/Config" to="." method="_on_config_pressed"]
 [connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Bifrost" to="." method="_on_bifrost_pressed"]

@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://nm0jbgfuadyt"]
+
+[ext_resource type="Script" uid="uid://ucs7pjc1iogl" path="res://Scripts/PathButton.cs" id="1_smycg"]
+[ext_resource type="Texture2D" uid="uid://cgf6wpqwrct15" path="res://Assets/Interactables/Button/button.png" id="2_iju5o"]
+[ext_resource type="Texture2D" uid="uid://ccw4gjuqdo1lk" path="res://Assets/Interactables/Button/button-pressed.png" id="3_edukx"]
+[ext_resource type="Texture2D" uid="uid://cckgpnfinyivs" path="res://Assets/Interactables/Button/solution-indicator.png" id="4_5mft2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_svtet"]
+radius = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrk2b"]
+atlas = ExtResource("2_iju5o")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4mwi"]
+atlas = ExtResource("3_edukx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ur6nl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrk2b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4mwi")
+}],
+"loop": true,
+"name": &"pressed",
+"speed": 0.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y3v6"]
+atlas = ExtResource("4_5mft2")
+region = Rect2(0, 0, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17uor"]
+atlas = ExtResource("4_5mft2")
+region = Rect2(11, 0, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe4pq"]
+atlas = ExtResource("4_5mft2")
+region = Rect2(22, 0, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4s01c"]
+atlas = ExtResource("4_5mft2")
+region = Rect2(33, 0, 11, 11)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fj65e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5y3v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17uor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oe4pq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4s01c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_5mft2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IndicatorSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_5y3v6"]
+resource_name = "fail"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IndicatorSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+
+[sub_resource type="Animation" id="Animation_17uor"]
+resource_name = "success"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IndicatorSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [3, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oe4pq"]
+_data = {
+&"RESET": SubResource("Animation_5mft2"),
+&"fail": SubResource("Animation_5y3v6"),
+&"success": SubResource("Animation_17uor")
+}
+
+[node name="Button" type="Area2D" unique_id=110037834 node_paths=PackedStringArray("buttonTimer", "as2d", "indicatorSprite", "ap")]
+script = ExtResource("1_smycg")
+buttonTimer = NodePath("ButtonTimer")
+as2d = NodePath("ButtonSprite")
+indicatorSprite = NodePath("IndicatorSprite")
+ap = NodePath("AnimationPlayer")
+
+[node name="ButtonTimer" type="Timer" parent="." unique_id=937633099]
+wait_time = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=904758195]
+shape = SubResource("CircleShape2D_svtet")
+
+[node name="ButtonSprite" type="AnimatedSprite2D" parent="." unique_id=1906679704]
+position = Vector2(0.5, -8)
+sprite_frames = SubResource("SpriteFrames_ur6nl")
+
+[node name="IndicatorSprite" type="AnimatedSprite2D" parent="." unique_id=561939667]
+position = Vector2(0, 1.5)
+sprite_frames = SubResource("SpriteFrames_fj65e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1029377733]
+libraries/ = SubResource("AnimationLibrary_oe4pq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

@@ -7,6 +7,7 @@ public partial class Menu : CanvasLayer
 	[Export] private Button play;
 	[Export] private Button config;
 	[Export] private Button quit;
+	[Export] private Button bifrost;
 	[Export] private Controls controls;
 
 	[Export] private Vignette vignette;
@@ -28,6 +29,9 @@ public partial class Menu : CanvasLayer
 		if (vhs.Material is ShaderMaterial s)
 			s.SetShaderParameter("aberration",0.01);
 
+		if (PathManager.Instance.SolvedAllPuzzles())
+			bifrost.Show();
+
 	}
 
 	public void _on_play_pressed()
@@ -46,12 +50,17 @@ public partial class Menu : CanvasLayer
 	{
 		GetTree().Quit();
 	}
+	
+	public void _on_bifrost_pressed()
+	{
+		OS.ShellOpen("https://bifrost.neocities.org/");
+	}
 
 	private void StartGame()
 	{
 		AudioManager.Instance.StartMusic();
 		TravelManager.Instance.ResetPos();
 		Utils.Instance.UpdateRichPresence("update_details", "Wandering...");
-		GetTree().ChangeSceneToFile("res://Scenes/Worlds/gray.tscn");
+		GetTree().ChangeSceneToFile("res://Scenes/init_quote.tscn");
 	}
 }

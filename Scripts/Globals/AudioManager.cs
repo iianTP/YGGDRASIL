@@ -5,6 +5,10 @@ public partial class AudioManager : Node
 {
 	public static AudioManager Instance { get; private set; }
 
+	public bool MusicOn { get; private set; } = true;
+	public bool SfxOn { get; private set; } = true;
+
+
 	[Export] private AudioStreamPlayer2D[] tracks;
 	[Export] private AudioStreamPlayer2D secretTrack;
 
@@ -15,8 +19,6 @@ public partial class AudioManager : Node
 
 	private int currTrack = 0;
 
-	private bool musicOn = true;
-	private bool sfxOn = true;
 
 	public override void _Ready()
 	{
@@ -27,7 +29,7 @@ public partial class AudioManager : Node
 
 	public void StartMusic()
 	{
-		if (!musicOn) return;
+		if (!MusicOn) return;
 		
 		tracks[0].Play();
 	}
@@ -46,7 +48,7 @@ public partial class AudioManager : Node
 
 	public void PlaySecretTrack()
 	{
-		if (!musicOn) return;
+		if (!MusicOn) return;
 		secretTrack.Play();
 	}
 
@@ -57,7 +59,7 @@ public partial class AudioManager : Node
 
 	public void PlaySfx(string sfx)
 	{
-		if (!sfxOn) return;
+		if (!SfxOn) return;
 		
 		switch (sfx){
 			case "click":
@@ -76,8 +78,8 @@ public partial class AudioManager : Node
 
 	public void SetAudio(bool music, bool sfx)
 	{
-		musicOn = music;
-		sfxOn = sfx;
+		MusicOn = music;
+		SfxOn = sfx;
 	}
 
 

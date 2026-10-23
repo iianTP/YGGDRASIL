@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccw4gjuqdo1lk"
-path="res://.godot/imported/button-pressed.png-b31775da173a467362c80b20ee37bd88.ctex"
+uid="uid://cckgpnfinyivs"
+path="res://.godot/imported/solution-indicator.png-3fb9edabe259154ced1345abfee1f058.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interactables/button-pressed.png"
-dest_files=["res://.godot/imported/button-pressed.png-b31775da173a467362c80b20ee37bd88.ctex"]
+source_file="res://Assets/Interactables/Button/solution-indicator.png"
+dest_files=["res://.godot/imported/solution-indicator.png-3fb9edabe259154ced1345abfee1f058.ctex"]
 
 [params]
 

@@ -7,9 +7,16 @@ public partial class PathManager : Node
 {
 	public static PathManager Instance { get; private set; }
 
+	[Signal] public delegate void UpdatedPathTrackingStateEventHandler();
+	[Signal] public delegate void SolutionAttemptEventHandler(string result);
+
+
+	// [Signal] public delegate void AppendedPathEventHandler();
+
+	public bool Tracking { get; private set; } = false;
+
 	public List<int> SolvedIdList { get; private set; } = [];
 	private int solvedCount = 0;
-	private bool started = false;
 	private string path = "";
 
 	public override void _Ready()
@@ -34,13 +41,13 @@ public partial class PathManager : Node
 
 	public void AppendPath(int worldId)
 	{
-		if (started && !path.Contains($"{worldId}"))
+		if (Tracking && worldId <= 9)
 			path += $"{worldId}";
 	}
 
 	public void UpdatePathTrackingState()
 	{
-		if(started) 
+		if(Tracking) 
 			CheckSolution();
 		else
 		{
@@ -48,7 +55,8 @@ public partial class PathManager : Node
 			AudioManager.Instance.PlaySfx("click");
 		}
 			
-		started = !started;
+		Tracking = !Tracking;
+		EmitSignal(SignalName.UpdatedPathTrackingState);
 	}
 
 	public bool SolvedAllPuzzles()
@@ -74,11 +82,12 @@ public partial class PathManager : Node
 		
 
 		if (id == -1 || SolvedIdList.Contains(id) || (id == 10 && !SolvedAllPuzzles()))
+		{
 			AudioManager.Instance.PlaySfx("fail");
+			EmitSignal(SignalName.SolutionAttempt, "fail");
+		}
 		else
 		{
-			
-			
 			SolvedIdList.Add(id);
 
 			ConfigFile solvedCf = new ConfigFile();
@@ -92,7 +101,8 @@ public partial class PathManager : Node
 
 			Utils.Instance.UpdateRichPresence("update_state",solvedCount);
 
-			AudioManager.Instance.PlaySfx("success");	
+			AudioManager.Instance.PlaySfx("success");
+			EmitSignal(SignalName.SolutionAttempt, "success");
 		}
 	}
 

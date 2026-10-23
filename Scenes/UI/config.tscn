@@ -8,9 +8,10 @@
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_u4yt8"]
 
-[node name="Config" type="CanvasLayer" unique_id=787137787 node_paths=PackedStringArray("musicBox", "lang", "reset", "save")]
+[node name="Config" type="CanvasLayer" unique_id=787137787 node_paths=PackedStringArray("musicBox", "sfxBox", "lang", "reset", "save")]
 script = ExtResource("1_fhk0q")
 musicBox = NodePath("VBoxContainer/MusicBox")
+sfxBox = NodePath("VBoxContainer/SfxBox")
 lang = NodePath("VBoxContainer/Lang")
 reset = NodePath("VBoxContainer/Reset")
 save = NodePath("VBoxContainer/Save")

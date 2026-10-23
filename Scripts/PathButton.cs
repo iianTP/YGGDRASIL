@@ -7,11 +7,18 @@ public partial class PathButton : Area2D
 
 	[Export] private Timer buttonTimer;
 	[Export] private AnimatedSprite2D as2d;
+	[Export] private AnimatedSprite2D indicatorSprite;
+	[Export] private AnimationPlayer ap;
+
 	private bool inRange = false;
 
 	public override void _Ready()
 	{
+		SetFrame();
+
 		buttonTimer.Timeout += StopPressing;
+
+		PathManager.Instance.SolutionAttempt += Indicate;
 	}
 
 	public override void _Process(double delta)
@@ -26,12 +33,21 @@ public partial class PathButton : Area2D
 		buttonTimer.Start();
 		as2d.Play("pressed");
 		EmitSignal(SignalName.ButtonPressed);
+		SetFrame();
 	}
 
 	private void StopPressing()
 	{
 		buttonTimer.Stop();
 		as2d.Play("default");
+	}
+	private void SetFrame()
+	{
+		indicatorSprite.Frame = PathManager.Instance.Tracking ? 1 : 0;
+	}
+	private void Indicate(string animation)
+	{
+		ap.Play(animation);
 	}
 
 	public void _on_area_entered(Area2D area)
@@ -44,5 +60,10 @@ public partial class PathButton : Area2D
 	{
 		if (area.IsInGroup("Player"))
 			inRange = false;
+	}
+
+	public void _on_tree_exiting()
+	{
+		PathManager.Instance.SolutionAttempt -= Indicate;
 	}
 }
