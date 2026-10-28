@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://ciufkc3sj5nwf"]
+
+[ext_resource type="PackedScene" uid="uid://dp0g6csyesjf1" path="res://Scenes/Paths/path_square.tscn" id="1_lqt0g"]
+
+[node name="PathDisplay" type="Node2D" unique_id=135570244]
+
+[node name="PathSquare" parent="." unique_id=1446494106 instance=ExtResource("1_lqt0g")]
+position = Vector2(-3, -3)
+color = 1
+
+[node name="PathSquare2" parent="." unique_id=223398572 instance=ExtResource("1_lqt0g")]
+position = Vector2(0, -3)
+color = 2
+
+[node name="PathSquare3" parent="." unique_id=983088409 instance=ExtResource("1_lqt0g")]
+position = Vector2(3, -3)
+color = 3
+
+[node name="PathSquare4" parent="." unique_id=22419995 instance=ExtResource("1_lqt0g")]
+position = Vector2(-3, 0)
+color = 4
+
+[node name="PathSquare5" parent="." unique_id=595257292 instance=ExtResource("1_lqt0g")]
+color = 5
+
+[node name="PathSquare6" parent="." unique_id=275351024 instance=ExtResource("1_lqt0g")]
+position = Vector2(3, 0)
+color = 6
+
+[node name="PathSquare7" parent="." unique_id=524896781 instance=ExtResource("1_lqt0g")]
+position = Vector2(-3, 3)
+color = 7
+
+[node name="PathSquare8" parent="." unique_id=150565558 instance=ExtResource("1_lqt0g")]
+position = Vector2(0, 3)
+color = 8
+
+[node name="PathSquare9" parent="." unique_id=1602674853 instance=ExtResource("1_lqt0g")]
+position = Vector2(3, 3)
+color = 9

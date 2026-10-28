@@ -58,7 +58,6 @@ public partial class Menu : CanvasLayer
 
 	private void StartGame()
 	{
-		AudioManager.Instance.StartMusic();
 		TravelManager.Instance.ResetPos();
 		Utils.Instance.UpdateRichPresence("update_details", "Wandering...");
 		GetTree().ChangeSceneToFile("res://Scenes/init_quote.tscn");

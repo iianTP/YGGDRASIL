@@ -53,10 +53,10 @@ texture = SubResource("PlaceholderTexture2D_aaqie")
 material = SubResource("ShaderMaterial_qguwj")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1591747754]
-offset_left = 220.0
-offset_top = 143.0
-offset_right = 432.0
-offset_bottom = 194.0
+offset_left = 93.0
+offset_top = 269.0
+offset_right = 305.0
+offset_bottom = 320.0
 theme = SubResource("Theme_vph24")
 text = "Buttons... the very start and the end of everything."
 

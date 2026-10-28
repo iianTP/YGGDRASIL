@@ -11,13 +11,13 @@ public partial class PathManager : Node
 	[Signal] public delegate void SolutionAttemptEventHandler(string result);
 
 
-	// [Signal] public delegate void AppendedPathEventHandler();
+	public string Path { get; private set; } = "";
 
 	public bool Tracking { get; private set; } = false;
 
 	public List<int> SolvedIdList { get; private set; } = [];
 	private int solvedCount = 0;
-	private string path = "";
+	
 
 	public override void _Ready()
 	{
@@ -42,7 +42,7 @@ public partial class PathManager : Node
 	public void AppendPath(int worldId)
 	{
 		if (Tracking && worldId <= 9)
-			path += $"{worldId}";
+			Path += $"{worldId}";
 	}
 
 	public void UpdatePathTrackingState()
@@ -51,7 +51,7 @@ public partial class PathManager : Node
 			CheckSolution();
 		else
 		{
-			path = "";
+			Path = "";
 			AudioManager.Instance.PlaySfx("click");
 		}
 			
@@ -76,8 +76,8 @@ public partial class PathManager : Node
 		solutionsCf.Load("res://Assets/Patterns/solutions.cfg");
 
 		int id = -1;
-		if (solutionsCf.GetSections().Contains(path))
-			id = (int)solutionsCf.GetValue(path,"id");
+		if (solutionsCf.GetSections().Contains(Path))
+			id = (int)solutionsCf.GetValue(Path,"id");
 
 		
 
@@ -104,6 +104,8 @@ public partial class PathManager : Node
 			AudioManager.Instance.PlaySfx("success");
 			EmitSignal(SignalName.SolutionAttempt, "success");
 		}
+		
+		Path = "";
 	}
 
 	public void ClearSolvedPuzzles()

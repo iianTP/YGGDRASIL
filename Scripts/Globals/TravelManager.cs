@@ -4,6 +4,9 @@ using System;
 public partial class TravelManager : Node
 {
 	public static TravelManager Instance;
+
+	public Utils.Colors CurrWorld = Utils.Colors.GRAY;
+
 	private Vector2 playerPos = new Vector2(1,1);
 
 
@@ -12,6 +15,7 @@ public partial class TravelManager : Node
 		["purple","gray","orange"],
 		["blue","green","black"]
 	];
+
 
 	public override void _Ready()
 	{

@@ -18,6 +18,8 @@ public partial class Utils : Node
 
 	public enum Letters{ Y,G1,G2,D,R,A,S,I,L }
 
+	public enum Colors { WHITE = 1, YELLOW, RED, PURPLE, GRAY, ORANGE, BLUE, GREEN, BLACK }
+
 	public override void _Ready()
 	{
 		Instance = this;

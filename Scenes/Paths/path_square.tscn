@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://dp0g6csyesjf1"]
+
+[ext_resource type="Texture2D" uid="uid://cdhpl2yugsa4m" path="res://Assets/Patterns/path-display.png" id="1_12eil"]
+[ext_resource type="Script" uid="uid://dcukcy8cer3an" path="res://Scripts/Misc/PathSquare.cs" id="2_0uf00"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owp6n"]
+atlas = ExtResource("1_12eil")
+region = Rect2(0, 6, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ioymn"]
+atlas = ExtResource("1_12eil")
+region = Rect2(0, 0, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkg3f"]
+atlas = ExtResource("1_12eil")
+region = Rect2(3, 0, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_biww7"]
+atlas = ExtResource("1_12eil")
+region = Rect2(6, 0, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq7yt"]
+atlas = ExtResource("1_12eil")
+region = Rect2(9, 0, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nq2n7"]
+atlas = ExtResource("1_12eil")
+region = Rect2(12, 0, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57i3u"]
+atlas = ExtResource("1_12eil")
+region = Rect2(15, 0, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t2hv"]
+atlas = ExtResource("1_12eil")
+region = Rect2(18, 0, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mtug"]
+atlas = ExtResource("1_12eil")
+region = Rect2(21, 0, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y887m"]
+atlas = ExtResource("1_12eil")
+region = Rect2(24, 0, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtvv8"]
+atlas = ExtResource("1_12eil")
+region = Rect2(0, 3, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpe2c"]
+atlas = ExtResource("1_12eil")
+region = Rect2(3, 3, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shob8"]
+atlas = ExtResource("1_12eil")
+region = Rect2(6, 3, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7psvc"]
+atlas = ExtResource("1_12eil")
+region = Rect2(9, 3, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kj7v"]
+atlas = ExtResource("1_12eil")
+region = Rect2(12, 3, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmh34"]
+atlas = ExtResource("1_12eil")
+region = Rect2(15, 3, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pi4ny"]
+atlas = ExtResource("1_12eil")
+region = Rect2(18, 3, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs66d"]
+atlas = ExtResource("1_12eil")
+region = Rect2(21, 3, 3, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kehcg"]
+atlas = ExtResource("1_12eil")
+region = Rect2(24, 3, 3, 3)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f4a4y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owp6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ioymn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkg3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_biww7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq7yt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nq2n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57i3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8t2hv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mtug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y887m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtvv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpe2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shob8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7psvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kj7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmh34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pi4ny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs66d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kehcg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PathSquare" type="AnimatedSprite2D" unique_id=1446494106]
+sprite_frames = SubResource("SpriteFrames_f4a4y")
+script = ExtResource("2_0uf00")

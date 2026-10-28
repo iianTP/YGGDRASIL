@@ -8,7 +8,7 @@ public partial class World : Node2D
 	[Export] private Player player;
 	[Export] private Portal[] portals;
 	[Export] private Color backgroundColor;
-	[Export] private int id;
+	[Export] private Utils.Colors id;
 
 	public override void _Ready()
 	{
@@ -18,7 +18,9 @@ public partial class World : Node2D
 		pm = PathManager.Instance;
 
 		RenderingServer.SetDefaultClearColor(backgroundColor);
-		pm.AppendPath(id);
+		pm.AppendPath((int)id);
+
+		TravelManager.Instance.CurrWorld = id;
 	}
 
 	public void PositionPlayer(Utils.Directions arrivalPortal)
@@ -37,7 +39,7 @@ public partial class World : Node2D
 	public void _on_button_button_pressed()
 	{
 		pm.UpdatePathTrackingState();
-		pm.AppendPath(id);
+		pm.AppendPath((int)id);
 	}
 
 }

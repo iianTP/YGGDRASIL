@@ -10,7 +10,12 @@ public partial class InitQuote : CanvasLayer
 	public override void _Ready()
 	{
 		quote.Text = Tr("OLDGUY_1");
-		timer.Timeout += () => { vignette.Transition(1,1,3,4,() => {GetTree().ChangeSceneToFile("res://Scenes/Worlds/gray.tscn");}); };
+		timer.Timeout += () => { 
+			vignette.Transition(1,1,3,4,() => {
+				AudioManager.Instance.StartMusic();
+				GetTree().ChangeSceneToFile("res://Scenes/Worlds/gray.tscn");
+			}); 
+		};
 		timer.Start();
 	}
 

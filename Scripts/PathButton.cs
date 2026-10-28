@@ -10,6 +10,8 @@ public partial class PathButton : Area2D
 	[Export] private AnimatedSprite2D indicatorSprite;
 	[Export] private AnimationPlayer ap;
 
+	[Export] private Node2D pathDisplay;
+
 	private bool inRange = false;
 
 	public override void _Ready()
@@ -45,9 +47,12 @@ public partial class PathButton : Area2D
 	{
 		indicatorSprite.Frame = PathManager.Instance.Tracking ? 1 : 0;
 	}
-	private void Indicate(string animation)
+	private async void Indicate(string animation)
 	{
+		pathDisplay.Hide();
 		ap.Play(animation);
+		await ToSignal(ap, AnimationMixer.SignalName.AnimationFinished);
+		pathDisplay.Show();
 	}
 
 	public void _on_area_entered(Area2D area)
