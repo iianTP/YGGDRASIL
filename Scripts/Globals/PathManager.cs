@@ -8,6 +8,8 @@ public partial class PathManager : Node
 	public static PathManager Instance { get; private set; }
 
 	[Signal] public delegate void UpdatedPathTrackingStateEventHandler();
+
+	[Signal] public delegate void StartedSolutionEventHandler();
 	[Signal] public delegate void SolutionAttemptEventHandler(string result);
 
 
@@ -51,7 +53,7 @@ public partial class PathManager : Node
 			CheckSolution();
 		else
 		{
-			Path = "";
+			EmitSignal(SignalName.StartedSolution);
 			AudioManager.Instance.PlaySfx("click");
 		}
 			

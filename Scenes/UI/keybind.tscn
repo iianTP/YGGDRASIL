@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cidaogimrqnte"]
+
+[ext_resource type="Script" uid="uid://xd88o2gm66v2" path="res://Scripts/UI/Keybind.cs" id="1_aq5bp"]
+[ext_resource type="PackedScene" uid="uid://fsvvwk43ij46" path="res://Scenes/UI/ui_button.tscn" id="2_ui6gr"]
+
+[node name="Keybind" type="Control" unique_id=1879379780 node_paths=PackedStringArray("button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aq5bp")
+keybindName = "TEST"
+keybindAction = "interact"
+button = NodePath("UIButton")
+
+[node name="UIButton" parent="." unique_id=29831465 instance=ExtResource("2_ui6gr")]
+layout_mode = 0
+text = "BIND: KEY"
+alignment = 0

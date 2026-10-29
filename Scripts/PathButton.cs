@@ -21,6 +21,7 @@ public partial class PathButton : Area2D
 		buttonTimer.Timeout += StopPressing;
 
 		PathManager.Instance.SolutionAttempt += Indicate;
+		PathManager.Instance.StartedSolution += Initiate;
 	}
 
 	public override void _Process(double delta)
@@ -47,12 +48,16 @@ public partial class PathButton : Area2D
 	{
 		indicatorSprite.Frame = PathManager.Instance.Tracking ? 1 : 0;
 	}
-	private async void Indicate(string animation)
+
+	private void Initiate()
+	{
+		ap.Play("RESET");
+		pathDisplay.Show();	
+	}
+	private void Indicate(string animation)
 	{
 		pathDisplay.Hide();
 		ap.Play(animation);
-		await ToSignal(ap, AnimationMixer.SignalName.AnimationFinished);
-		pathDisplay.Show();
 	}
 
 	public void _on_area_entered(Area2D area)
@@ -70,5 +75,6 @@ public partial class PathButton : Area2D
 	public void _on_tree_exiting()
 	{
 		PathManager.Instance.SolutionAttempt -= Indicate;
+		PathManager.Instance.StartedSolution -= Initiate;
 	}
 }

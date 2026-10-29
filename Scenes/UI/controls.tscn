@@ -4,13 +4,13 @@
 
 [sub_resource type="Theme" id="Theme_181pv"]
 default_font = ExtResource("1_0pffg")
-default_font_size = 14
+default_font_size = 10
 
 [node name="Controls" type="RichTextLabel" unique_id=1463637067]
 modulate = Color(0.5802277, 0.58022773, 0.58022773, 1)
-offset_right = 138.0
+offset_right = 194.0
 offset_bottom = 54.0
 theme = SubResource("Theme_181pv")
-text = "ARROWS FOR GUIDANCE
-Z FOR ELEVATION
-X FOR INTERVENTION"
+text = "FOR GUIDANCE: ARROWS / A D
+FOR ELEVATION: Z / SPACE
+FOR INTERVENTION: X / E"

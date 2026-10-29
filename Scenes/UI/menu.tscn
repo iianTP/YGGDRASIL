@@ -70,10 +70,10 @@ material = SubResource("ShaderMaterial_q0i46")
 
 [node name="Controls" parent="." unique_id=1463637067 instance=ExtResource("7_rb4ur")]
 visible = false
-offset_left = 107.0
-offset_top = 188.0
-offset_right = 245.0
-offset_bottom = 242.0
+offset_left = 111.0
+offset_top = 217.0
+offset_right = 249.0
+offset_bottom = 250.0
 script = ExtResource("8_4twqa")
 
 [node name="Cursor" parent="." unique_id=436838560 instance=ExtResource("4_ugp1d")]
