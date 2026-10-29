@@ -16,7 +16,7 @@ public partial class Letter : AnimatedSprite2D
 
 	public void DisplayLetter()
 	{
-		Play("show");
+		Play(PathManager.Instance.SolvedSecretPuzzle() ? "show-pink" : "show");
 		Frame = (int)letter;
 	}
 

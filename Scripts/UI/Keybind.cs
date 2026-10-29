@@ -10,7 +10,10 @@ public partial class Keybind : Control
 	public override void _Ready()
 	{
 		if (InputMap.ActionGetEvents(keybindAction)[0] is InputEventKey iek)
+		{
 			button.Text = keybindName + ": " + iek.AsText();
+		}
+			
 	}
 
 }

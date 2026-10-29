@@ -29,7 +29,7 @@ public partial class Menu : CanvasLayer
 		if (vhs.Material is ShaderMaterial s)
 			s.SetShaderParameter("aberration",0.01);
 
-		if (PathManager.Instance.SolvedAllPuzzles())
+		if (PathManager.Instance.SolvedAllPuzzles() && !PathManager.Instance.SolvedSecretPuzzle())
 			bifrost.Show();
 
 	}

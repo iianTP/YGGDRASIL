@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3qmjf5cyb438"]
 
 [ext_resource type="FontFile" uid="uid://dg2wt3hrsipda" path="res://Assets/ModernDOS8x16.ttf" id="1_0pffg"]
+[ext_resource type="Script" uid="uid://dulcw3n0fgnbf" path="res://Scripts/UI/Controls.cs" id="2_181pv"]
 
 [sub_resource type="Theme" id="Theme_181pv"]
 default_font = ExtResource("1_0pffg")
@@ -8,9 +9,11 @@ default_font_size = 10
 
 [node name="Controls" type="RichTextLabel" unique_id=1463637067]
 modulate = Color(0.5802277, 0.58022773, 0.58022773, 1)
-offset_right = 194.0
-offset_bottom = 54.0
+offset_right = 164.34784
+offset_bottom = 33.0
+scale = Vector2(1.15, 1.15)
 theme = SubResource("Theme_181pv")
-text = "FOR GUIDANCE: ARROWS / A D
+text = "FOR GUIDANCE: ARROWS / A & D
 FOR ELEVATION: Z / SPACE
 FOR INTERVENTION: X / E"
+script = ExtResource("2_181pv")
