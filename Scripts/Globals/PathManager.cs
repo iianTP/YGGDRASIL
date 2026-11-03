@@ -107,7 +107,7 @@ public partial class PathManager : Node
 			EmitSignal(SignalName.SolutionAttempt, "success");
 		}
 		
-		Path = "";
+		ResetPath();
 	}
 
 	public void ClearSolvedPuzzles()
@@ -120,6 +120,12 @@ public partial class PathManager : Node
 	public int PuzzlesSolved()
 	{
 		return solvedCount;
+	}
+
+	public void ResetPath()
+	{
+		Tracking = false;
+		Path = "";
 	}
 
 	

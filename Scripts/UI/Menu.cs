@@ -16,6 +16,8 @@ public partial class Menu : CanvasLayer
 
 	public override void _Ready()
 	{
+		PathManager.Instance.ResetPath();
+		
 		play.Text = Tr("BT_PLAY");
 		config.Text = Tr("BT_CONFIG");
 		quit.Text = Tr("BT_QUIT");
