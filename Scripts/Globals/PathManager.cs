@@ -107,7 +107,7 @@ public partial class PathManager : Node
 			EmitSignal(SignalName.SolutionAttempt, "success");
 		}
 		
-		ResetPath();
+		Path = "";
 	}
 
 	public void ClearSolvedPuzzles()
